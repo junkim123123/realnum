@@ -1,21 +1,11 @@
-# FILE: render.yaml - Render 배포 설정 파일 (Next.js Web Service용)
-# 이 파일은 Render 대시보드에서 GitHub 레포를 선택하면 자동으로 적용됩니다.
-# 주의: repo와 branch는 Render 대시보드에서 직접 선택하므로 여기서는 주석 처리합니다.
-
 services:
   - type: web
     name: nexsupply-web
-    # repo: Render 대시보드에서 GitHub 레포 선택
-    # branch: Render 대시보드에서 브랜치 선택 (예: main)
     env: node
-    plan: free  # 기본 무료 플랜, 필요시 Starter 또는 Pro로 업그레이드 가능
-    region: oregon  # 오레곤 리전 (기본값), 필요시 변경 가능
-    rootDir: web  # web 디렉토리를 루트로 설정
-    
-    # Build 명령어: web 디렉토리에서 npm 사용
+    plan: free
+    region: oregon
+    rootDir: web
     buildCommand: npm install && npm run build
-    
-    # Start 명령어: standalone 빌드 결과물 실행
     startCommand: npm run start
     
     # 헬스 체크 엔드포인트 (선택사항, Render가 자동으로 / 경로도 체크함)
