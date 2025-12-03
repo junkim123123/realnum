@@ -217,6 +217,45 @@
         "ISO 9001",
         "Trade Assurance"
       ]
+    },
+    {
+      "id": "stainless_steel_water_bottle",
+      "label": "Stainless Steel Water Bottle",
+      "typicalSupplierTypes": [
+        "ODM (Original Design Manufacturer): Most common; they have existing designs you can private label.",
+        "OEM (Original Equipment Manufacturer): They manufacture based on your specific designs and tooling.",
+        "Specialized Drinkware Factories: Factories focusing exclusively on vacuum flasks and stainless steel vessels, often possessing greater technical expertise."
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001:2015: For a certified Quality Management System.",
+        "Social Compliance Audit Report (BSCI or SMETA): Demonstrates ethical labor practices. Most major retailers will require this."
+      ],
+      "niceToHaveCertificates": [
+        "ISO 14001: For Environmental Management Systems.",
+        "NSF/ANSI 51: Certification for food equipment materials, indicates a high standard of material safety.",
+        "GRS (Global Recycled Standard): If you plan to market the use of recycled stainless steel."
+      ],
+      "sampleQuestionsToFactory": [
+        "What specific grade of stainless steel do you use for the inner wall that contacts the liquid? Is it 304 (18/8) or 316?",
+        "Can you provide complete, unedited third-party test reports for FDA 21 CFR compliance for all food-contact materials (steel, plastic lid, silicone seal)?",
+        "What method do you use to seal the vacuum point on the bottom of the bottle? Can you confirm it is a 100% lead-free process and provide documentation?",
+        "Can you share your most recent BSCI or SMETA audit report, including the summary and CAP (Corrective Action Plan)?",
+        "What is your standard procedure for leak testing and thermal insulation testing during production?"
+      ],
+      "commonRedFlags": [
+        "Vague or evasive answers about the grade of stainless steel (e.g., 'food grade steel' without specifying '304' or '18/8').",
+        "Inability or unwillingness to provide recent, complete test reports from accredited labs like SGS, Intertek, or TUV.",
+        "Unusually low pricing, which often indicates the use of inferior materials like 201 steel or cutting corners on quality control.",
+        "Refusal to disclose their vacuum sealing method or confirm it is lead-free.",
+        "Lack of a valid social compliance audit (BSCI, SMETA), or providing an expired or falsified report."
+      ],
+      "recommendedAlibabaFilters": [
+        "Verified Supplier",
+        "Trade Assurance",
+        "Supplier has been assessed onsite by a third-party inspection company (e.g., SGS, TUV Rheinland).",
+        "Minimum 3-5 years of experience manufacturing this specific product category.",
+        "Filter by suppliers who list 'BSCI' or 'ISO9001' in their company profile."
+      ]
     }
   ]
 }

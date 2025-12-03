@@ -250,6 +250,58 @@
         "https://www.iso.org/committee/48456.html",
         "https://www.sae.org/standards"
       ]
+    },
+    {
+      "id": "stainless_steel_water_bottle",
+      "label": "Stainless Steel Water Bottle",
+      "exampleProducts": [
+        "Insulated stainless steel water bottle",
+        "Vacuum-sealed thermal flask",
+        "Stainless steel sports bottle with straw lid",
+        "Wide-mouth stainless steel canteen"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "7323.93.00",
+        "9617.00.10"
+      ],
+      "requiredRegulations": [
+        "FDA Food Contact Materials Regulations: All materials in contact with beverages must comply. Key regulations include 21 CFR 177.2600 for silicone gaskets, 21 CFR 177.1520 for polypropylene lids, and the GRAS (Generally Recognized as Safe) status for 304/18-8 stainless steel.",
+        "Consumer Product Safety Improvement Act (CPSIA): If marketed as a 'children's product' (for ages 12 and under), it requires a Children's Product Certificate (CPC), third-party testing by a CPSC-accepted lab, and permanent tracking labels.",
+        "16 CFR Part 1303 - Ban of Lead-Containing Paint and Certain Consumer Products Bearing Lead-Containing Paint: Surface coatings on the bottle must not contain lead in excess of 90 ppm.",
+        "CPSIA Section 101 - Total Lead Content: Accessible substrate materials of children's products must not contain more than 100 ppm of lead.",
+        "16 CFR Part 1307 - Prohibition of Children's Toys and Child Care Articles Containing Specified Phthalates: Accessible plastic parts (lids, straws) of children's products must not contain more than 0.1% of 8 specified phthalates.",
+        "16 CFR Part 1501 - Small Parts Regulation: If intended for children under 3, any detachable components must not fit into the CPSC small parts cylinder, as they would present a choking hazard.",
+        "16 CFR Part 1500 - Federal Hazardous Substances Act (FHSA): Requires that children's products not present mechanical hazards such as sharp points (16 CFR 1500.48) or sharp edges (16 CFR 1500.49).",
+        "California Proposition 65 (The Safe Drinking Water and Toxic Enforcement Act of 1986): Requires a warning label if the product exposes consumers to chemicals like lead, cadmium, or BPA above specified 'safe harbor' levels.",
+        "19 CFR Part 134 - Country of Origin Marking: Requires the product to be conspicuously and indelibly marked with its country of origin (e.g., 'Made in China') in English."
+      ],
+      "testingRequirements": [
+        "FDA 21 CFR Migration Testing: Extraction testing on all food-contact components (stainless steel body, plastic lid, silicone seal) to ensure no harmful chemicals leach into the contents.",
+        "Total Lead Content in Substrates (CPSC-CH-E1001-08.3 for metals, CPSC-CH-E1002-08.3 for non-metals) - Mandatory for children's products.",
+        "Lead in Paint and Surface Coatings (16 CFR Part 1303 / CPSC-CH-E1003-09.1) - Mandatory for any painted or coated areas on children's products.",
+        "Phthalate Content Analysis (CPSC-CH-C1001-09.4) - Mandatory for plastic components of children's products.",
+        "Small Parts Testing (16 CFR Part 1501) - Mandatory if the product is intended for children under 3.",
+        "Mechanical Hazard Testing: Sharp points (16 CFR 1500.48) and sharp edges (16 CFR 1500.49) for children's products.",
+        "California Proposition 65 Screening: Chemical analysis for lead, cadmium, BPA, and other relevant substances to determine if a warning label is required.",
+        "Thermal Performance Test: A quality/performance test, not a regulatory requirement, to verify insulation claims (e.g., 'keeps cold for 24 hours')."
+      ],
+      "highRiskFlags": [
+        "Lead Solder Sealing Point: A small solder point at the bottom of the bottle, often covered by a cap or disk, used to seal the vacuum. This is a common source of lead contamination and a major cause of recalls.",
+        "Use of Non-Food-Grade Stainless Steel: Use of 201 stainless steel instead of food-grade 304 (18/8) or 316. 201 steel has lower nickel content and is more prone to rust.",
+        "Lead in Exterior Paints/Decorations: Decorative logos and coatings can contain lead exceeding the 90 ppm limit.",
+        "Detachable Small Parts: Silicone mouthpieces, straw tips, or decorative elements on lids can detach and pose a choking hazard for young children."
+      ],
+      "referenceLinks": [
+        "https://www.cpsc.gov/Business--Manufacturing/Business-Education/childrens-products",
+        "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1303",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1307",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-C/part-1501",
+        "https://oehha.ca.gov/proposition-65/proposition-65-list"
+      ]
     }
   ]
 }
