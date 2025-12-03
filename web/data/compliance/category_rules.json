@@ -496,6 +496,49 @@
         "https://www.fcc.gov/oet/ea/sdoc",
         "https://www.cpsc.gov/Recalls"
       ]
+    },
+    {
+      "id": "yoga_mat",
+      "label": "TPE Yoga Mat",
+      "exampleProducts": [
+        "Eco-Friendly TPE Yoga Mat",
+        "Non-Slip TPE Exercise Mat",
+        "Thick TPE Fitness Mat",
+        "Dual Layer TPE Yoga Mat with Carrying Strap"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "9506.91.0030",
+        "3926.90.9985"
+      ],
+      "requiredRegulations": [
+        "Consumer Product Safety Act (CPSA) Section 15: The product must not present a substantial product hazard. This includes chemical hazards (e.g., skin irritants) and physical hazards (e.g., being overly slippery).",
+        "16 CFR Part 1303 - Ban of Lead-Containing Paint and Certain Consumer Products Bearing Lead-Containing Paint: Mandatory if the mat or its accessories have any painted logos or surface coatings. The lead content must not exceed 90 ppm.",
+        "General Certificate of Conformity (GCC): Required if 16 CFR Part 1303 applies. The US-based importer or manufacturer must issue a GCC certifying compliance with all applicable CPSC rules.",
+        "California Proposition 65 (The Safe Drinking Water and Toxic Enforcement Act of 1986): Requires businesses to provide warnings to Californians about significant exposures to chemicals that cause cancer, birth defects or other reproductive harm. TPE mats must be tested for listed chemicals to determine if a warning label is needed."
+      ],
+      "testingRequirements": [
+        "Lead in Surface Coatings (CPSC-CH-E1003-09.1): Mandatory only if the product has painted elements. For general use products, first-party testing is sufficient for a GCC.",
+        "California Proposition 65 Screening: Chemical testing to screen for chemicals on the Prop 65 list to determine if a warning is required. This is not legally mandated but is the standard due diligence practice.",
+        "Recommended Performance Test - Slip Resistance (Coefficient of Friction): Test per ASTM D1894 to ensure the mat is not a slip hazard when wet or dry. This supports the general safety requirement under the CPSA.",
+        "Recommended Performance Test - Tear Strength: Test per ASTM D624 to assess durability and prevent the creation of tripping hazards from torn pieces.",
+        "Recommended Chemical Test - Volatile Organic Compound (VOC) Emissions: Testing for off-gassing of chemicals. Standards like California Department of Public Health (CDPH) Standard Method V1.2 can be used.",
+        "Note on Phthalates: While 16 CFR Part 1307 (Phthalates) is mandatory only for children's toys and child care articles, testing for certain phthalates is required for California Proposition 65 compliance."
+      ],
+      "highRiskFlags": [
+        "Strong Chemical Odor: Indicates high levels of VOCs or residual chemicals from manufacturing, which can lead to customer complaints and potential health issues.",
+        "Painted Logos/Designs: Triggers mandatory compliance with 16 CFR Part 1303 for lead content, requiring testing and a GCC.",
+        "Lack of Prop 65 Due Diligence: Failure to test for Prop 65 chemicals can result in significant fines and legal action from private enforcers in California.",
+        "Slippery Surface: A primary safety failure. If the mat's coefficient of friction is too low, it presents a clear injury hazard and violates the general duty clause of the CPSA."
+      ],
+      "referenceLinks": [
+        "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/General-Certificate-of-Conformity-GCC",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1303",
+        "https://oehha.ca.gov/proposition-65/proposition-65-list",
+        "https://www.cpsc.gov/s3fs-public/CPSA.pdf"
+      ]
     }
   ]
 }
