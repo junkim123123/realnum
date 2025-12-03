@@ -335,6 +335,44 @@
         "Supplier with > 3 years of experience",
         "Filter by certifications: ISO 9001, BSCI"
       ]
+    },
+    {
+      "id": "electric_kettle",
+      "label": "Glass Electric Kettle",
+      "typicalSupplierTypes": [
+        "ODM (Original Design Manufacturer): Most common; they have existing designs that can be private labeled. They should already have experience with US compliance.",
+        "OEM (Original Equipment Manufacturer): Will build to your specific design, but requires more rigorous oversight from the importer to ensure compliance."
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001:2015 - For quality management systems. This is a baseline for a reliable manufacturer.",
+        "Proof of existing NRTL Certification (e.g., UL Listing or ETL Mark) for similar electric kettle models. Ask for the UL File Number or ETL Control Number and verify it in the respective NRTL's public directory.",
+        "FDA Compliance Test Reports for all food-contact materials used in the product."
+      ],
+      "niceToHaveCertificates": [
+        "BSCI (Business Social Compliance Initiative) Audit Report",
+        "SMETA (Sedex Members Ethical Trade Audit) Report",
+        "ISO 14001 - For environmental management systems."
+      ],
+      "sampleQuestionsToFactory": [
+        "Can you provide the verifiable UL File Number or ETL Control Number for the exact model you are proposing?",
+        "What brand of thermostat controller do you use? Is it Strix or Otter?",
+        "Please provide the full FDA 21 CFR compliance test reports for the glass, stainless steel, silicone seal, and plastic lid.",
+        "Can you share your most recent BSCI or SMETA social compliance audit report?",
+        "What specific quality control checks do you perform on the production line, including Hi-Pot testing, grounding continuity, and function testing for every unit?"
+      ],
+      "commonRedFlags": [
+        "Supplier cannot provide a valid, verifiable UL or ETL certification number for a similar product.",
+        "Supplier claims 'CE' certification is sufficient for the US market (CE is for Europe and is not recognized for US electrical safety compliance).",
+        "Vagueness about the brand of the internal thermostat controller or using an unknown, cheaper brand.",
+        "Hesitation to provide material compliance reports (FDA, Prop 65) or providing outdated/irrelevant reports.",
+        "A price that is significantly lower than competitors, often indicating the use of substandard components and cutting corners on safety testing."
+      ],
+      "recommendedAlibabaFilters": [
+        "Verified Supplier",
+        "Trade Assurance",
+        "Years in Business: > 5 years",
+        "Search Keywords: 'ETL electric kettle', 'UL listed kettle', 'Strix controller kettle', 'FDA food grade kettle'"
+      ]
     }
   ]
 }

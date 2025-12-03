@@ -264,7 +264,6 @@
         "United States"
       ],
       "typicalHtsCodes": [
-        "7323.93.00",
         "9617.00.10"
       ],
       "requiredRegulations": [
@@ -450,6 +449,52 @@
         "https://www.ecfr.gov/current/title-10/part-430/subpart-C/section-430.32",
         "https://www.epa.gov/tsca-import-export-requirements",
         "https://www.wirelesspowerconsortium.com/products"
+      ]
+    },
+    {
+      "id": "electric_kettle",
+      "label": "Glass Electric Kettle",
+      "exampleProducts": [
+        "Borosilicate Glass Electric Tea Kettle",
+        "LED Illuminated Glass Electric Kettle",
+        "Variable Temperature Glass Electric Water Kettle",
+        "Cordless Glass Electric Kettle with Stainless Steel Base"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "8516.10.00",
+        "8516.79.00"
+      ],
+      "requiredRegulations": [
+        "Consumer Product Safety Act (CPSA) Section 14(a) - Requires a General Certificate of Conformity (GCC) certifying the product complies with all applicable consumer product safety rules. The GCC must be based on a reasonable testing program.",
+        "UL 1082: Standard for Household Electric Coffee Makers and Brewing-Type Appliances - While a voluntary standard, it is the primary standard used by the CPSC and Nationally Recognized Testing Laboratories (NRTLs) to assess the electrical, thermal, and mechanical safety of electric kettles. Compliance is essential for the GCC.",
+        "FDA Food Contact Materials (FCM) Regulations - All materials in contact with water must comply. Key regulations include: 21 CFR § 177.1520 for Olefin polymers (e.g., Polypropylene lids), 21 CFR § 177.2600 for rubber articles intended for repeated use (e.g., silicone seals), and GRAS (Generally Recognized as Safe) status for materials like borosilicate glass and food-grade stainless steel (e.g., 304/316).",
+        "California Proposition 65 (The Safe Drinking Water and Toxic Enforcement Act of 1986) - Requires a clear and reasonable warning if the product can expose consumers to chemicals on the Prop 65 list (e.g., Lead, BPA, Phthalates) above established Safe Harbor Levels.",
+        "47 CFR Part 15 - Radio Frequency Devices: Applies to electric kettles that incorporate digital circuitry (e.g., digital displays, variable temperature controls). These devices are considered unintentional radiators and must not cause harmful electromagnetic interference. Requires a Supplier's Declaration of Conformity (SDoC).",
+        "Note on CPSIA Children's Product Rules: Regulations such as 16 CFR Part 1501 (Small Parts), 16 CFR Part 1303 (Lead in Paint), and 16 CFR Part 1307 (Phthalates) are not applicable as an electric kettle is a general-use product not intended for children 12 years of age or younger."
+      ],
+      "testingRequirements": [
+        "Electrical Safety Testing by a Nationally Recognized Testing Laboratory (NRTL) like UL, Intertek (ETL), or CSA. Testing must be performed to the UL 1082 standard. Key tests include: Dielectric Voltage Withstand (Hi-Pot), Grounding Continuity, Input Power, Temperature/Burn Hazard, Abnormal Operation (e.g., boil-dry protection), and Strain Relief tests for the power cord.",
+        "FDA Food Contact Material Migration Testing: Extraction testing per 21 CFR for all plastic and silicone components that contact water to ensure no harmful substances leach into the water above specified limits.",
+        "California Proposition 65 Screening: Chemical analysis (e.g., using XRF screening and confirmatory wet chemistry) of all accessible components (plastic housing, power cord, internal solder, handle) to identify the presence of lead, cadmium, phthalates, BPA, and other listed chemicals to determine if a warning is required.",
+        "FCC Part 15 Emissions Testing: For models with digital circuitry, testing must be performed by an accredited lab to verify compliance with electromagnetic interference limits as specified in 47 CFR Part 15, Subpart B. This is required for the Supplier's Declaration of Conformity (SDoC).",
+        "Performance and Durability Testing (Quality Assurance): Includes verification of auto-shutoff and boil-dry protection functions, water boiling time, handle and body temperature measurements, lid hinge cycle testing, and leak testing."
+      ],
+      "highRiskFlags": [
+        "Faulty Thermostat/Controller: Use of low-quality controllers (non-Strix or Otter brands) can lead to failure of auto-shutoff or boil-dry protection, posing a significant fire hazard. This is a common cause of recalls.",
+        "Electrical Shock Hazard: Improper wiring, inadequate insulation, or poor strain relief on the power cord can expose live wires, creating a risk of electric shock.",
+        "Material Contamination: Non-compliance with FDA food-grade standards for plastics, silicone, or steel can lead to the migration of harmful chemicals like BPA or heavy metals into the water.",
+        "Burn Hazard: Poor design can result in excessively hot external surfaces, handles, or uncontrolled steam release upon opening the lid."
+      ],
+      "referenceLinks": [
+        "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/General-Certificate-of-Conformity-GCC",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/CFRSearch.cfm?CFRPart=177",
+        "https://oehha.ca.gov/proposition-65/proposition-65-list",
+        "https://www.osha.gov/nationally-recognized-testing-laboratory-program/current-list-of-nrtls",
+        "https://www.fcc.gov/oet/ea/sdoc",
+        "https://www.cpsc.gov/Recalls"
       ]
     }
   ]
