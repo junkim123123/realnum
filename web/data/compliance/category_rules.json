@@ -405,6 +405,52 @@
           "url": "https://toxicsinpackaging.org/"
         }
       ]
+    },
+    {
+      "id": "wireless_phone_charger",
+      "label": "Qi Wireless Phone Charger",
+      "exampleProducts": [
+        "Qi wireless charging pad",
+        "Wireless charging stand",
+        "3-in-1 wireless charging station for phone, watch, and earbuds",
+        "Car mount wireless phone charger",
+        "Furniture-integrated wireless charger"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "8504.40.9570",
+        "8504.40.9580"
+      ],
+      "requiredRegulations": [
+        "FCC Part 15 Subpart C - Intentional Radiators: Mandatory for devices that intentionally radiate radiofrequency energy. Requires testing, certification by a Telecommunication Certification Body (TCB), and labeling with an FCC ID. (Source: 47 CFR Part 15 Subpart C)",
+        "General Certificate of Conformity (GCC): The US-based importer or manufacturer must issue a GCC certifying that the product complies with all applicable CPSC-enforced safety rules. (Source: 16 CFR Part 1110)",
+        "California Proposition 65 (Safe Drinking Water and Toxic Enforcement Act of 1986): Requires a clear and reasonable warning label if the product exposes individuals to chemicals known to the state of California to cause cancer or reproductive toxicity above established safe harbor levels.",
+        "Energy Efficiency Regulations: The external power supply (AC/DC adapter) is subject to Department of Energy (DOE) Level VI efficiency standards. The product must be certified and registered in the DOE's database. (Source: 10 CFR § 430.32(w))",
+        "Toxic Substances Control Act (TSCA): Importers must certify that all chemical substances in the product comply with TSCA regulations. This is typically managed through a certification statement provided at the time of customs entry. (Source: 15 U.S.C. Chapter 53)"
+      ],
+      "testingRequirements": [
+        "FCC Part 15C Certification Testing: Mandatory testing for radiated and conducted emissions to ensure the device does not cause harmful interference and complies with RF exposure limits. Must be performed by an FCC-accredited test laboratory.",
+        "Electrical Safety Testing (UL/ETL Certification): While voluntary at the federal level, certification to a safety standard like UL 62368-1 is a de-facto requirement for market access, retailer acceptance, and liability mitigation. This applies to both the charger and its AC power adapter.",
+        "Qi Certification (Wireless Power Consortium - WPC): An industry standard, not a legal requirement. Essential for ensuring safety (e.g., foreign object detection), interoperability, and performance. The official Qi logo cannot be used without certification from the WPC.",
+        "California Proposition 65 Chemical Screening: Laboratory testing (e.g., XRF screening, ICP-MS analysis) to determine the concentration of listed chemicals (e.g., lead, cadmium, phthalates) in accessible components to assess if a warning label is required.",
+        "RoHS (Restriction of Hazardous Substances) Compliance Testing: While not a US federal law, compliance is a common requirement from major retailers and a global industry standard. Tests for Lead, Mercury, Cadmium, Hexavalent Chromium, PBBs, and PBDEs."
+      ],
+      "highRiskFlags": [
+        "Overheating and Fire Hazard: A primary safety risk often caused by poor design, low-quality components, or the lack of safety circuits like foreign object detection (FOD) and over-temperature protection. This is a common reason for product recalls.",
+        "Lack of Official Qi Certification: Products advertised as 'Qi-compatible' but not officially certified by the WPC pose risks of slow charging, incompatibility, overheating, and potential damage to the phone's battery.",
+        "FCC Non-Compliance: Failure to obtain proper FCC certification can result in fines, product seizure by U.S. Customs, and sales injunctions. Uncertified devices can interfere with critical radio communications.",
+        "Power Adapter (AC/DC) Safety: The wall adapter is a frequent point of failure and must be certified to UL 62368-1 to prevent electric shock and fire hazards. It must also meet DOE Level VI energy efficiency requirements."
+      ],
+      "referenceLinks": [
+        "https://www.fcc.gov/oet/ea/fccid",
+        "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/General-Certificate-of-Conformity-GCC",
+        "https://oehha.ca.gov/proposition-65",
+        "https://www.ecfr.gov/current/title-10/part-430/subpart-C/section-430.32",
+        "https://www.epa.gov/tsca-import-export-requirements",
+        "https://www.wirelesspowerconsortium.com/products"
+      ]
     }
   ]
 }

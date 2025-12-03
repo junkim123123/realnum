@@ -296,6 +296,45 @@
         "Supplier's Main Markets: North America",
         "Feature: Trade Assurance"
       ]
+    },
+    {
+      "id": "wireless_phone_charger",
+      "label": "Qi Wireless Phone Charger",
+      "typicalSupplierTypes": [
+        "ODM (Original Design Manufacturer): Offers pre-existing, tested designs that can be private-labeled. This is often the fastest route to market.",
+        "OEM (Original Equipment Manufacturer): Builds products based on the buyer's custom design specifications.",
+        "Specialized Electronics Factory: Factories focusing specifically on power products, chargers, and PCBA (Printed Circuit Board Assembly)."
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001:2015: Certification for a quality management system, indicating consistent production processes.",
+        "WPC (Wireless Power Consortium) Membership: Verifies the factory is part of the official Qi ecosystem and has experience with the certification process.",
+        "Evidence of Prior US Market Compliance: The factory must provide recent (within 2-3 years) UL/ETL test reports and active FCC IDs for similar products they have manufactured."
+      ],
+      "niceToHaveCertificates": [
+        "BSCI (Business Social Compliance Initiative): Audit report showing compliance with international labor standards.",
+        "SMETA (Sedex Members Ethical Trade Audit): Demonstrates ethical and responsible business practices in labor, health, safety, and the environment.",
+        "ISO 14001: Certification for an environmental management system."
+      ],
+      "sampleQuestionsToFactory": [
+        "Are you an active member of the Wireless Power Consortium (WPC)? Please provide your membership details for verification.",
+        "Can you provide a full, unredacted UL 62368-1 test report for a similar wireless charger you have produced for the US market within the last 2 years?",
+        "Please provide the FCC ID for one of your recent wireless charger models so we can verify its grant of authorization in the FCC database.",
+        "What is your standard production line testing for each unit, specifically for foreign object detection (FOD), over-temperature protection, and charging efficiency?",
+        "Do you conduct a 100% burn-in or aging test on finished products? If so, for how long and under what electrical load?"
+      ],
+      "commonRedFlags": [
+        "Claiming 'Qi-Compatible' but not being a WPC member or having any officially certified products in the WPC database.",
+        "Inability to provide valid, recent UL/ETL test reports or verifiable FCC IDs for similar products.",
+        "Unusually low pricing, which often indicates the use of substandard components, omission of critical safety circuits, or falsified certifications.",
+        "Vague or evasive answers to technical questions about compliance, testing procedures, or key components used.",
+        "No ISO 9001 certification, which may indicate a lack of standardized quality control processes."
+      ],
+      "recommendedAlibabaFilters": [
+        "Verified Supplier",
+        "Trade Assurance",
+        "Supplier with > 3 years of experience",
+        "Filter by certifications: ISO 9001, BSCI"
+      ]
     }
   ]
 }
