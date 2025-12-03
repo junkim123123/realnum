@@ -11,7 +11,7 @@ type UsageEntry = {
 const usage = new Map<string, UsageEntry>();
 
 const ANONYMOUS_LIMIT = 1;
-const AUTHENTICATED_LIMIT = 10;
+const AUTHENTICATED_LIMIT = 5;
 
 function getCurrentDateAsNumber(): number {
   const now = new Date();
@@ -39,6 +39,13 @@ export function getUsage(identifier: string, isAuthenticated: boolean): { count:
 
 export function incrementUsage(identifier: string, isAuthenticated: boolean): { count: number; limit: number } {
     const limit = getLimit(isAuthenticated);
+    
+    // For local development or alpha persona testing only.
+    // This must never be enabled in production.
+    if (process.env.NEXSUPPLY_DISABLE_USAGE_LIMITS === 'true') {
+        return { count: 0, limit };
+    }
+    
     const currentDate = getCurrentDateAsNumber();
     const entry = usage.get(identifier);
 

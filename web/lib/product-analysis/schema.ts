@@ -1,4 +1,7 @@
 import { z } from "zod";
+import type { CategoryComplianceRule } from '../types/compliance';
+import type { CategoryFactoryVettingHints } from '../types/factoryVetting';
+import type { InitialOrderCost } from '../analysis/orderCost';
 
 export const LandedCostBreakdownSchema = z.object({
   fob_price: z.string().describe("Estimated FOB price per unit (e.g., '$5.00')"),
@@ -29,7 +32,15 @@ export const ProductAnalysisSchema = z.object({
 
 export type LandedCostBreakdown = z.infer<typeof LandedCostBreakdownSchema>;
 export type RiskAssessment = z.infer<typeof RiskAssessmentSchema>;
-export type ProductAnalysis = z.infer<typeof ProductAnalysisSchema>;
+
+// Extended ProductAnalysis type with optional compliance and factory vetting hints
+export type ProductAnalysis = z.infer<typeof ProductAnalysisSchema> & {
+  compliance_hints?: CategoryComplianceRule;
+  factory_vetting_hints?: CategoryFactoryVettingHints;
+  regulation_reasoning?: { regulation: string; reason: string }[];
+  testing_cost_estimate?: { test: string; low: number; high: number }[];
+  initial_order_cost?: InitialOrderCost;
+};
 
 export const AnalyzeProductRequestSchema = z.object({
   input: z.string().min(1, "Product link or description is required"),

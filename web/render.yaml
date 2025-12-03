@@ -1,89 +1,20 @@
-# FILE: render.yaml - Render 배포 설정 파일 (Next.js Web Service용)
-# 이 파일은 Render 대시보드에서 GitHub 레포를 선택하면 자동으로 적용됩니다.
-# 주의: repo와 branch는 Render 대시보드에서 직접 선택하므로 여기서는 주석 처리합니다.
-
 services:
   - type: web
-    name: nexsupply-web
-    # repo: Render 대시보드에서 GitHub 레포 선택
-    # branch: Render 대시보드에서 브랜치 선택 (예: main)
-    env: node
-    plan: free  # 기본 무료 플랜, 필요시 Starter 또는 Pro로 업그레이드 가능
-    region: oregon  # 오레곤 리전 (기본값), 필요시 변경 가능
-    
-    # Build 명령어: npm 사용
-    buildCommand: npm install && npm run build
-    
-    # Start 명령어: standalone 빌드 결과물 실행
-    startCommand: npm run start
-    
-    # 헬스 체크 엔드포인트 (선택사항, Render가 자동으로 / 경로도 체크함)
-    healthCheckPath: /api/health
-    
-    # 환경 변수 목록 (Render 대시보드에서 실제 값 입력 필요)
+    name: nexsupply-platform
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run streamlit_app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
     envVars:
-      # 필수: Gemini AI API 키
       - key: GEMINI_API_KEY
-        sync: false  # sync: false = Render 대시보드에서 수동으로 값 입력
-      
-      # NextAuth 설정 (필수)
-      - key: NEXTAUTH_SECRET
         sync: false
-        # 생성 방법: openssl rand -base64 32
-      
-      - key: NEXTAUTH_URL
-        sync: false
-        # 예시: https://nexsupply-web.onrender.com (배포 후 실제 URL로 변경)
-      
-      # Google OAuth (선택사항)
-      - key: GOOGLE_CLIENT_ID
-        sync: false
-      
-      - key: GOOGLE_CLIENT_SECRET
-        sync: false
-      
-      # Email Provider (선택사항)
-      - key: EMAIL_SERVER
-        sync: false
-        # 예시: smtp://smtp.gmail.com:587
-      
-      - key: EMAIL_FROM
-        sync: false
-        # 예시: noreply@nexsupply.net
-      
-      # 데이터베이스 (선택사항, Prisma 사용 시)
-      - key: DATABASE_URL
-        sync: false
-        # PostgreSQL 연결 문자열
-      
-      # 이메일 발송 (선택사항)
-      - key: RESEND_API_KEY
-        sync: false
-      
-      - key: SMTP_HOST
-        sync: false
-      
+      - key: SMTP_SERVER
+        value: smtp.gmail.com
       - key: SMTP_PORT
-        value: "465"
-      
-      - key: SMTP_USER
+        value: 465
+      - key: SMTP_USERNAME
         sync: false
-      
-      - key: SMTP_PASS
+      - key: SMTP_PASSWORD
         sync: false
-      
-      - key: SYSTEM_EMAIL_FROM
+      - key: SMTP_FROM_EMAIL
         sync: false
-      
-      - key: ADMIN_EMAIL
-        sync: false
-      
-      # UI 플래그 (선택사항)
-      - key: NEXT_PUBLIC_GOOGLE_ENABLED
-        value: "true"
-      
-      - key: NEXT_PUBLIC_EMAIL_ENABLED
-        value: "true"
-    
-    # 자동 배포 설정 (GitHub push 시 자동 배포)
-    autoDeploy: true
+

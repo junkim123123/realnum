@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, FormEvent, useMemo } from 'react';
+import { useState, useEffect, FormEvent, useMemo, useRef } from 'react';
 import { Loader2, CheckCircle } from 'lucide-react';
 import type { ProductAnalysis } from '@/lib/product-analysis/schema';
 import {
@@ -15,6 +15,7 @@ import { useAuth } from '@/lib/auth';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ProductAnalysisFeedback } from '@/components/product-analysis-feedback';
+import { CategoryKnowledgeCards } from '@/components/category-knowledge-cards';
 import SignInModal from '@/components/sign-in-modal';
 
 interface ProductAnalyzerChatProps {
@@ -39,6 +40,7 @@ export default function ProductAnalyzerChat({ onAnalysisComplete, source }: Prod
   const [error, setError] = useState<string | null>(null);
   const [showSignInModal, setShowSignInModal] = useState(false);
   const { isAuthenticated, isLoading: isAuthLoading, userId } = useAuth();
+  const limitHitLoggedRef = useRef(false);
 
   // Initialize first message - show intro, then wait for user to start
   useEffect(() => {
@@ -137,6 +139,21 @@ export default function ProductAnalyzerChat({ onAnalysisComplete, source }: Prod
     handleSend(value);
   };
 
+  const getRiskColor = (level: string) => {
+    switch (level) {
+      case 'Low': return 'text-green-500';
+      case 'Medium': return 'text-yellow-500';
+      case 'High': return 'text-red-500';
+      default: return 'text-muted-foreground';
+    }
+  };
+
+  const getScoreColor = (score: number) => {
+    if (score >= 80) return 'text-green-500';
+    if (score >= 50) return 'text-yellow-500';
+    return 'text-red-500';
+  };
+
   const handleCreateReport = async () => {
     setIsLoading(true);
     try {
@@ -149,6 +166,26 @@ export default function ProductAnalyzerChat({ onAnalysisComplete, source }: Prod
 
       const data = await res.json();
       if (!res.ok) {
+        // Log limit_hit event if quota exceeded
+        if (data.error === 'quota_exceeded') {
+          if (!limitHitLoggedRef.current) {
+            limitHitLoggedRef.current = true;
+            const userType = isAuthenticated ? 'user' : 'anonymous';
+            const productInput = buildAnalyzerInputFromConversation(state).input;
+            fetch('/api/limit-events', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                action: 'limit_hit',
+                reason: data.reason || (isAuthenticated ? 'user_daily_limit' : 'anonymous_daily_limit'),
+                userType,
+                input: productInput,
+              }),
+            }).catch((err) => {
+              console.error('[ProductAnalyzerChat] Failed to log limit_hit event:', err);
+            });
+          }
+        }
         throw new Error(data.error || 'Analysis failed');
       }
       setAnalysis(data.analysis);
@@ -156,6 +193,8 @@ export default function ProductAnalyzerChat({ onAnalysisComplete, source }: Prod
         source,
         path: 'conversational',
       });
+      // Reset limit hit flag on successful analysis
+      limitHitLoggedRef.current = false;
     } catch (err) {
       console.error('Failed to create report', err);
       const errorState: SourcingConversationState = {
@@ -326,13 +365,56 @@ export default function ProductAnalyzerChat({ onAnalysisComplete, source }: Prod
 
       {/* Report Ready State */}
       {analysis ? (
-        <div className="text-center space-y-4">
-          <h3 className="card-title">Report Ready</h3>
-          <p className="helper-text">Your Landed Cost + Risk Report for "{analysis.product_name}" is ready.</p>
+        <div className="space-y-6">
+          <Card>
+            {/* Header */}
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+              <div className="flex-1">
+                <h3 className="card-title">{analysis.product_name}</h3>
+                <p className="card-subtitle mt-1">Est. HTS Code: {analysis.hts_code}</p>
+              </div>
+              <div className="flex flex-col items-start sm:items-end shrink-0">
+                <span className="text-badge text-muted-foreground mb-1">Risk Score</span>
+                <span className={`text-4xl font-bold ${getScoreColor(analysis.risk_assessment.overall_score)}`}>
+                  {analysis.risk_assessment.overall_score}
+                </span>
+              </div>
+            </div>
+
+            {/* Landed Cost Breakdown */}
+            <div className="mb-6 pb-6 border-t border-subtle-border pt-6">
+              <h4 className="text-lg font-semibold text-foreground mb-3">Landed Cost Breakdown</h4>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-muted-foreground">
+                <p>FOB Price:</p><p className="text-right text-foreground">{analysis.landed_cost_breakdown.fob_price}</p>
+                <p>Freight Cost:</p><p className="text-right text-foreground">{analysis.landed_cost_breakdown.freight_cost}</p>
+                <p>Duty Rate:</p><p className="text-right text-foreground">{analysis.landed_cost_breakdown.duty_rate}</p>
+                <p>Duty Cost:</p><p className="text-right text-foreground">{analysis.landed_cost_breakdown.duty_cost}</p>
+                <p className="font-bold text-foreground">Total Landed Cost:</p><p className="text-right font-bold text-primary">{analysis.landed_cost_breakdown.landed_cost}</p>
+              </div>
+            </div>
+
+            {/* Risk Assessment */}
+            <div className="mb-6 pb-6 border-t border-subtle-border pt-6">
+              <h4 className="text-lg font-semibold text-foreground mb-3">Risk Assessment</h4>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p>Compliance Risk: <span className={`${getRiskColor(analysis.risk_assessment.compliance_risk)} font-medium`}>{analysis.risk_assessment.compliance_risk}</span></p>
+                <p>Supplier Risk: <span className={`${getRiskColor(analysis.risk_assessment.supplier_risk)} font-medium`}>{analysis.risk_assessment.supplier_risk}</span></p>
+                <p>Logistics Risk: <span className={`${getRiskColor(analysis.risk_assessment.logistics_risk)} font-medium`}>{analysis.risk_assessment.logistics_risk}</span></p>
+                <p className="mt-2 text-foreground">{analysis.risk_assessment.summary}</p>
+              </div>
+            </div>
+
+            {/* Recommendation */}
+            <div className="pt-6 border-t border-subtle-border">
+              <h4 className="text-lg font-semibold text-foreground mb-3">Recommendation</h4>
+              <p className="text-sm text-muted-foreground">{analysis.recommendation}</p>
+            </div>
+          </Card>
+
           {!showLeadForm ? (
             <Button
               onClick={() => setShowLeadForm(true)}
-              className="w-full sm:w-auto"
+              className="w-full"
               size="lg"
             >
               Get a Sourcing Quote
@@ -384,6 +466,13 @@ export default function ProductAnalyzerChat({ onAnalysisComplete, source }: Prod
               )}
             </Card>
           )}
+
+          {/* Category Knowledge Cards */}
+          <CategoryKnowledgeCards
+            complianceHints={analysis.compliance_hints}
+            factoryVettingHints={analysis.factory_vetting_hints}
+          />
+
           <ProductAnalysisFeedback analysis={analysis} mode="conversational" source={source} />
         </div>
       ) : state.ready_for_analysis ? (

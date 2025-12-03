@@ -1,0 +1,501 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "This file contains manually researched category compliance rules. During alpha, we maintain these as versioned JSON files. Each entry should be researched using external tools (Perplexity, GPT, etc.) and follow the same structure. Rename this file to category_rules.json after adding your first real entries.",
+  "categories": [
+    {
+      "id": "baby_teether",
+      "label": "Baby Teether / Infant Teething Toys",
+      "exampleProducts": [
+        "silicone baby teether",
+        "infant teething ring",
+        "baby teething toy with rattle"
+      ],
+      "targetMarkets": [
+        "United States",
+        "European Union",
+        "Canada",
+        "Australia"
+      ],
+      "typicalHtsCodes": [
+        "9503.00.00",
+        "3924.10.00",
+        "4014.90.50"
+      ],
+      "requiredRegulations": [
+        "CPSIA (Consumer Product Safety Improvement Act)",
+        "ASTM F963 (Toy Safety Standard)",
+        "16 CFR Part 1303 (Lead Content)",
+        "CA Prop 65 (if selling to California)"
+      ],
+      "testingRequirements": [
+        "Third-party lab testing for CPSIA compliance required",
+        "Lead content must be below 100 ppm",
+        "Phthalates testing required (8 specific phthalates)",
+        "Small parts testing to ensure no choking hazards",
+        "Tensile strength testing for silicone products"
+      ],
+      "highRiskFlags": [
+        "Products for children under 3 years old are high-risk",
+        "Materials (silicone, rubber) must be food-grade",
+        "Colorants must be non-toxic and FDA-approved",
+        "No BPA, PVC, or phthalates allowed",
+        "Import holds are common if testing documentation is missing"
+      ],
+      "referenceLinks": [
+        "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Baby-Products",
+        "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/Childrens-Products",
+        "https://www.astm.org/Standards/F963.htm"
+      ]
+    },
+    {
+      "id": "stainless_steel_tumbler",
+      "label": "Stainless Steel Tumbler / Water Bottle",
+      "exampleProducts": [
+        "stainless steel insulated water bottle",
+        "double-wall tumbler cup",
+        "stainless steel travel mug"
+      ],
+      "targetMarkets": [
+        "United States",
+        "European Union",
+        "Canada",
+        "United Kingdom"
+      ],
+      "typicalHtsCodes": [
+        "7323.93.00",
+        "9617.00.40",
+        "3926.90.99"
+      ],
+      "requiredRegulations": [
+        "FDA Food Contact Regulations (21 CFR)",
+        "California Prop 65 (if applicable)",
+        "EU REACH (if selling to EU)",
+        "LFGB (if selling to Germany)"
+      ],
+      "testingRequirements": [
+        "Food contact material testing (migration testing)",
+        "Stainless steel grade verification (should be 304 or 316)",
+        "Lead and cadmium content testing",
+        "Leak-proof testing for bottles with lids",
+        "Dishwasher safety testing (if claiming dishwasher safe)"
+      ],
+      "highRiskFlags": [
+        "Must use food-grade stainless steel (304 or 316)",
+        "Any coating or lining must be FDA-approved for food contact",
+        "Claims like 'BPA-free' require documentation",
+        "Custom logos/printing must use food-safe inks",
+        "Vacuum seal integrity is critical for insulation claims"
+      ],
+      "referenceLinks": [
+        "https://www.fda.gov/food/food-ingredients-packaging/food-contact-substances-fcs",
+        "https://www.fda.gov/food/food-ingredients-packaging/fda-regulation-food-contact-substances-how-determine-if-substance-food-contact-substance",
+        "https://oehha.ca.gov/proposition-65"
+      ]
+    },
+    {
+      "id": "us_baby_teether_toy",
+      "label": "Silicone Baby Teether Toy",
+      "exampleProducts": [
+        "Mushroom Head Silicone Teether",
+        "Giraffe Shaped Silicone Teether",
+        "Silicone Teething Tubes (Hollow Straws)",
+        "Wearable Teething Mitten with Silicone Top",
+        "Silicone and Wood Teething Ring"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "9503.00.00",
+        "3926.90.99"
+      ],
+      "requiredRegulations": [
+        "CPSIA (Consumer Product Safety Improvement Act of 2008) - Applies to all children's products.",
+        "16 CFR Part 1250 - Safety Standard Mandating ASTM F963 for Toys.",
+        "ASTM F963-23 - Standard Consumer Safety Specification for Toy Safety.",
+        "16 CFR Part 1500 - Federal Hazardous Substances Act (FHSA) Regulations, including mechanical and physical hazards like sharp points and edges.",
+        "16 CFR Part 1501 - Small Parts Regulation for toys and articles intended for children under 3 years old.",
+        "16 CFR Part 1303 - Ban of Lead-Containing Paint and Certain Consumer Products Bearing Lead-Containing Paint (Limit: 90 ppm).",
+        "CPSIA Section 101 - Total Lead Content in Substrates of Children's Products (Limit: 100 ppm).",
+        "16 CFR Part 1307 - Prohibition of Children’s Toys and Child Care Articles Containing Specified Phthalates (8 phthalates limited to 0.1%).",
+        "16 CFR Part 1130 - Consumer Product Safety Commission Requirements for Tracking Labels for Children's Products.",
+        "21 CFR 177.2600 - FDA regulation for 'Rubber articles intended for repeated use', applicable to food-grade silicone.",
+        "California Proposition 65 - Safe Drinking Water and Toxic Enforcement Act of 1986."
+      ],
+      "testingRequirements": [
+        "Third-party testing by a CPSC-accepted laboratory is mandatory for children's products.",
+        "ASTM F963-23 Physical & Mechanical Tests: Use and abuse (impact, torque, tension), sharp points/edges, small parts analysis.",
+        "ASTM F963-23 Chemical Tests: Soluble heavy metals content in substrate materials (8 elements: Antimony, Arsenic, Barium, Cadmium, Chromium, Lead, Mercury, Selenium).",
+        "ASTM F963-23 Flammability of Solids (incorporates 16 CFR § 1500.44).",
+        "Total Lead Content in Substrate per CPSIA Section 101 (100 ppm limit).",
+        "Phthalates Content Test per 16 CFR Part 1307 (8 specific phthalates, 0.1% limit per phthalate).",
+        "Small Parts Test per 16 CFR 1501 - The teether and any detached parts must not fit into the small parts test cylinder.",
+        "FDA Extraction Testing per 21 CFR 177.2600 for products marketed as 'food-grade', to ensure no harmful substances leach into water or fatty foods.",
+        "A Children's Product Certificate (CPC) must be issued by the importer or US manufacturer, based on passing test results from a CPSC-accepted lab."
+      ],
+      "highRiskFlags": [
+        "Choking Hazard: Small pieces breaking off during use is a primary recall reason. Durability and tension tests are critical.",
+        "Material Purity: Use of non-food-grade silicone or silicone with fillers can lead to chemical leaching and test failures for heavy metals or FDA compliance.",
+        "Hollow Designs: Teethers with hollow parts can trap water and saliva, leading to mold and bacteria growth if not designed with drainage or for easy disassembly and cleaning.",
+        "Incorrect Age Grading: Labeling a product for an incorrect age can lead to misuse and safety incidents. Teethers are for children under 3, invoking the small parts regulation.",
+        "Strangulation Hazard: Teethers with cords, strings, or loops that could fit around a child's neck are prohibited or have strict length requirements under ASTM F963."
+      ],
+      "referenceLinks": [
+        "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Childrens-Products",
+        "https://www.cpsc.gov/cgi-bin/labsearch/",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1250",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-C/part-1501",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1307",
+        "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-C/section-177.2600",
+        "https://oehha.ca.gov/proposition-65"
+      ]
+    },
+    {
+      "id": "auto_category_1",
+      "label": "Passenger Vehicles",
+      "exampleProducts": [
+        "Sedan",
+        "Sport Utility Vehicle (SUV)",
+        "Electric Car",
+        "Hatchback",
+        "Pickup Truck"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "8703.23.00",
+        "8703.24.00",
+        "8703.80.00",
+        "8703.90.00"
+      ],
+      "requiredRegulations": [
+        "National Highway Traffic Safety Administration (NHTSA) Regulations: All passenger vehicles must comply with all applicable Federal Motor Vehicle Safety Standards (FMVSS) as specified in 49 CFR Part 571.",
+        "Environmental Protection Agency (EPA) Regulations: Vehicles must meet federal emissions standards under 40 CFR Parts 85, 86, and 600. Importers must submit EPA Form 3520-1 upon entry.",
+        "NHTSA Importation Requirements: Importers must submit NHTSA Form HS-7 at the port of entry to declare FMVSS compliance.",
+        "American Automobile Labeling Act (AALA): Requires labeling specifying the percentage of U.S./Canadian parts content, the final assembly point, and the country of origin for the engine and transmission (49 CFR Part 583).",
+        "California Air Resources Board (CARB): Stricter emissions standards that apply to vehicles sold in California and other states that have adopted California's standards under Section 177 of the Clean Air Act. Requires a specific Executive Order (EO) number for compliance.",
+        "California Proposition 65 (Safe Drinking Water and Toxic Enforcement Act of 1986): Requires businesses to provide warnings to Californians about significant exposures to chemicals that cause cancer, birth defects or other reproductive harm.",
+        "NOTE: CPSC regulations such as CPSIA, 16 CFR Part 1501 (small parts), and 16 CFR Parts 1303/1307 (lead/phthalates) do NOT apply to passenger vehicles. They apply to children's products, which could include vehicle accessories like car seats or toys sold with the vehicle."
+      ],
+      "testingRequirements": [
+        "FMVSS Compliance Testing: Mandatory third-party or first-party (with sufficient data) testing to prove compliance with all applicable standards. Key examples include:",
+        "FMVSS 208: Occupant Crash Protection (including front and side impact crash tests).",
+        "FMVSS 108: Lamps, Reflective Devices, and Associated Equipment.",
+        "FMVSS 135: Light Vehicle Brake Systems.",
+        "FMVSS 214: Side Impact Protection.",
+        "FMVSS 301: Fuel System Integrity.",
+        "FMVSS 305: Electric Powered Vehicles: Electrolyte Spillage and Electrical Shock Protection (for EVs).",
+        "EPA Emissions Testing: Vehicle must undergo testing according to the Federal Test Procedure (FTP) to receive an EPA Certificate of Conformity.",
+        "On-Board Diagnostics (OBD-II) Verification: System must be tested and validated per EPA and CARB requirements.",
+        "AALA Content Verification: Audit and verification of the supply chain to determine parts content percentages for labeling."
+      ],
+      "highRiskFlags": [
+        "Non-Conforming Vehicles: Attempting to import a vehicle not originally manufactured to meet US standards (a 'gray market' vehicle) is extremely difficult and costly to bring into compliance.",
+        "Incomplete Documentation: Failure to provide a valid EPA Form 3520-1 and NHTSA Form HS-7 at the time of import will result in the vehicle being denied entry.",
+        "Lack of Manufacturer Support: The original manufacturer must certify compliance. A vehicle from a manufacturer with no official US presence or designated agent to handle recalls is a major red flag.",
+        "Emissions Failures: A vehicle that cannot pass EPA and/or CARB emissions testing cannot be legally sold or registered in the respective states."
+      ],
+      "referenceLinks": [
+        "https://www.nhtsa.gov/importing-vehicle",
+        "https://www.epa.gov/importing-vehicles-and-engines",
+        "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-V/part-571",
+        "https://ww2.arb.ca.gov/",
+        "https://oehha.ca.gov/proposition-65"
+      ]
+    },
+    {
+      "id": "auto_category_2",
+      "label": "Automotive Filters",
+      "exampleProducts": [
+        "Spin-on engine oil filter",
+        "Cartridge-style engine oil filter",
+        "Panel-type engine air filter",
+        "Activated carbon cabin air filter",
+        "In-line gasoline fuel filter"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "8421.23.00",
+        "8421.31.00",
+        "8421.39.80",
+        "8421.99.00"
+      ],
+      "requiredRegulations": [
+        "California Proposition 65: Requires a warning label if the product contains chemicals known to the state to cause cancer or reproductive toxicity above safe harbor levels.",
+        "National Traffic and Motor Vehicle Safety Act: Imposes a general duty on manufacturers to ensure their products are free of safety-related defects. A faulty filter causing a fuel leak or engine failure is a safety defect under NHTSA jurisdiction.",
+        "FTC 'Made in USA' Standard: If marketed as such, the product must be 'all or virtually all' made in the United States.",
+        "EPA Regulations (40 CFR Part 279): While not a regulation on the sale of new filters, these rules govern the management and disposal of used oil and oil filters, which can influence product design and marketing."
+      ],
+      "testingRequirements": [
+        "Performance Testing (Industry Standard): Testing to SAE/ISO standards is critical to ensure product function, safety, and mitigate liability risk.",
+        "Oil Filter Testing (ISO 4548 / SAE J1858): Includes multipass filtration efficiency and capacity, burst pressure, impulse fatigue, and bubble leak tests.",
+        "Air Filter Testing (ISO 5011 / SAE J726): Measures filtration efficiency, dust holding capacity, and airflow restriction.",
+        "Fuel Filter Testing (ISO 19438 / SAE J905): Measures filtration efficiency, pressure drop, and structural integrity.",
+        "Cabin Air Filter Testing (ISO 11155): Measures particulate filtration efficiency.",
+        "California Proposition 65 Screening: Chemical analysis (e.g., XRF, GC-MS) to determine if concentrations of listed chemicals (e.g., lead, BPA, phthalates) require a warning label."
+      ],
+      "highRiskFlags": [
+        "Fuel or Oil Leaks: A cracked housing or failed seal can lead to fluid leaks, creating a significant fire hazard and risk of engine seizure. This is a primary cause for NHTSA recalls.",
+        "Filter Media Failure: Low-quality media can collapse or tear, releasing contaminants into the engine and causing catastrophic damage.",
+        "Burst Failure: Inadequate canister strength or seaming can lead to a burst under pressure, causing a sudden and total loss of oil.",
+        "Incorrect Fitment: Poor dimensional tolerances can result in improper sealing, allowing unfiltered fluid to bypass the filter."
+      ],
+      "referenceLinks": [
+        "https://www.nhtsa.gov/recalls",
+        "https://oehha.ca.gov/proposition-65",
+        "https://www.ftc.gov/business-guidance/enforcement/complying-made-usa-standard",
+        "https://www.iso.org/committee/48456.html",
+        "https://www.sae.org/standards"
+      ]
+    },
+    {
+      "id": "stainless_steel_water_bottle",
+      "label": "Stainless Steel Water Bottle",
+      "exampleProducts": [
+        "Insulated stainless steel water bottle",
+        "Vacuum-sealed thermal flask",
+        "Stainless steel sports bottle with straw lid",
+        "Wide-mouth stainless steel canteen"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "9617.00.10"
+      ],
+      "requiredRegulations": [
+        "FDA Food Contact Materials Regulations: All materials in contact with beverages must comply. Key regulations include 21 CFR 177.2600 for silicone gaskets, 21 CFR 177.1520 for polypropylene lids, and the GRAS (Generally Recognized as Safe) status for 304/18-8 stainless steel.",
+        "Consumer Product Safety Improvement Act (CPSIA): If marketed as a 'children's product' (for ages 12 and under), it requires a Children's Product Certificate (CPC), third-party testing by a CPSC-accepted lab, and permanent tracking labels.",
+        "16 CFR Part 1303 - Ban of Lead-Containing Paint and Certain Consumer Products Bearing Lead-Containing Paint: Surface coatings on the bottle must not contain lead in excess of 90 ppm.",
+        "CPSIA Section 101 - Total Lead Content: Accessible substrate materials of children's products must not contain more than 100 ppm of lead.",
+        "16 CFR Part 1307 - Prohibition of Children's Toys and Child Care Articles Containing Specified Phthalates: Accessible plastic parts (lids, straws) of children's products must not contain more than 0.1% of 8 specified phthalates.",
+        "16 CFR Part 1501 - Small Parts Regulation: If intended for children under 3, any detachable components must not fit into the CPSC small parts cylinder, as they would present a choking hazard.",
+        "16 CFR Part 1500 - Federal Hazardous Substances Act (FHSA): Requires that children's products not present mechanical hazards such as sharp points (16 CFR 1500.48) or sharp edges (16 CFR 1500.49).",
+        "California Proposition 65 (The Safe Drinking Water and Toxic Enforcement Act of 1986): Requires a warning label if the product exposes consumers to chemicals like lead, cadmium, or BPA above specified 'safe harbor' levels.",
+        "19 CFR Part 134 - Country of Origin Marking: Requires the product to be conspicuously and indelibly marked with its country of origin (e.g., 'Made in China') in English."
+      ],
+      "testingRequirements": [
+        "FDA 21 CFR Migration Testing: Extraction testing on all food-contact components (stainless steel body, plastic lid, silicone seal) to ensure no harmful chemicals leach into the contents.",
+        "Total Lead Content in Substrates (CPSC-CH-E1001-08.3 for metals, CPSC-CH-E1002-08.3 for non-metals) - Mandatory for children's products.",
+        "Lead in Paint and Surface Coatings (16 CFR Part 1303 / CPSC-CH-E1003-09.1) - Mandatory for any painted or coated areas on children's products.",
+        "Phthalate Content Analysis (CPSC-CH-C1001-09.4) - Mandatory for plastic components of children's products.",
+        "Small Parts Testing (16 CFR Part 1501) - Mandatory if the product is intended for children under 3.",
+        "Mechanical Hazard Testing: Sharp points (16 CFR 1500.48) and sharp edges (16 CFR 1500.49) for children's products.",
+        "California Proposition 65 Screening: Chemical analysis for lead, cadmium, BPA, and other relevant substances to determine if a warning label is required.",
+        "Thermal Performance Test: A quality/performance test, not a regulatory requirement, to verify insulation claims (e.g., 'keeps cold for 24 hours')."
+      ],
+      "highRiskFlags": [
+        "Lead Solder Sealing Point: A small solder point at the bottom of the bottle, often covered by a cap or disk, used to seal the vacuum. This is a common source of lead contamination and a major cause of recalls.",
+        "Use of Non-Food-Grade Stainless Steel: Use of 201 stainless steel instead of food-grade 304 (18/8) or 316. 201 steel has lower nickel content and is more prone to rust.",
+        "Lead in Exterior Paints/Decorations: Decorative logos and coatings can contain lead exceeding the 90 ppm limit.",
+        "Detachable Small Parts: Silicone mouthpieces, straw tips, or decorative elements on lids can detach and pose a choking hazard for young children."
+      ],
+      "referenceLinks": [
+        "https://www.cpsc.gov/Business--Manufacturing/Business-Education/childrens-products",
+        "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1303",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1307",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-C/part-1501",
+        "https://oehha.ca.gov/proposition-65/proposition-65-list"
+      ]
+    },
+    {
+      "id": "led_desk_lamp_with_usb_charging",
+      "label": "LED Desk Lamp with USB Charging Port",
+      "exampleProducts": [
+        "Dimmable LED Desk Lamp with USB Charging Port",
+        "Adjustable Gooseneck Office Table Lamp with USB",
+        "Foldable LED Desk Light with Wireless Charger and USB Port",
+        "Modern Eye-Caring Desk Lamp with USB"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "9405.21.40",
+        "9405.29.40"
+      ],
+      "requiredRegulations": [
+        {
+          "name": "Nationally Recognized Testing Laboratory (NRTL) Certification",
+          "details": "Required by OSHA for workplace safety and considered a de facto requirement for retail market access. The product must be certified by an NRTL (e.g., UL, ETL) to the relevant safety standard, primarily UL 153 for Portable Electric Luminaires.",
+          "authority": "OSHA"
+        },
+        {
+          "name": "Power Supply Certification",
+          "details": "The external power adapter or internal power supply must be NRTL certified, typically to UL 62368-1 (Audio/video, information and communication technology equipment) or UL 1310 (Class 2 Power Units).",
+          "authority": "OSHA / NRTL"
+        },
+        {
+          "name": "FCC Part 15B Supplier's Declaration of Conformity (SDoC)",
+          "details": "Applies to unintentional radiators. The lamp's internal electronics (power supply, dimmer) generate radio frequency energy and must not cause harmful interference. Products with wireless charging are intentional radiators and fall under stricter certification rules (e.g., FCC Part 15C or Part 18).",
+          "authority": "FCC"
+        },
+        {
+          "name": "General Certificate of Conformity (GCC)",
+          "details": "As a general use product subject to CPSC-enforced rules (e.g., 16 CFR Part 1303), the US-based importer must issue a GCC certifying compliance with all applicable consumer product safety rules.",
+          "authority": "CPSC"
+        },
+        {
+          "name": "16 CFR Part 1303 - Ban of Lead-Containing Paint and Certain Consumer Products Bearing Lead-Containing Paint",
+          "details": "Surface coatings on the product must not contain lead in excess of 90 parts per million (ppm).",
+          "authority": "CPSC"
+        },
+        {
+          "name": "California Proposition 65",
+          "details": "Requires a clear and reasonable warning if the product can expose consumers to chemicals on the Prop 65 list (e.g., lead, phthalates) above established safe harbor levels. This is a California state requirement.",
+          "authority": "California OEHHA"
+        },
+        {
+          "name": "Department of Energy (DOE) Level VI Energy Efficiency",
+          "details": "External power supplies (EPS) sold in the US must meet these mandatory minimum energy efficiency and no-load power consumption standards, as defined in 10 CFR 430.32.",
+          "authority": "DOE"
+        },
+        {
+          "name": "Toxics in Packaging Clearinghouse (TPCH)",
+          "details": "Regulates the sum concentration of four heavy metals (lead, mercury, cadmium, and hexavalent chromium) in product packaging and packaging components, which must not exceed 100 ppm. Enforced at the state level by 19 states.",
+          "authority": "State-level (via TPCH)"
+        }
+      ],
+      "testingRequirements": [
+        "NRTL Safety Testing (per UL 153): Includes construction review, stability test, strain relief test, temperature (heat rise) test, dielectric voltage-withstand test, and flammability testing of plastic components.",
+        "Power Supply Safety Testing (per UL 62368-1 or UL 1310): Evaluates the external power supply for electrical shock, fire, and energy hazards.",
+        "Electromagnetic Compatibility (EMC) Testing (per FCC Part 15B): Measures radiated and conducted emissions to ensure they are within the limits for a Class B digital device suitable for a residential environment.",
+        "Lead in Surface Coatings (per CPSC-CH-E1003-09.1): Laboratory testing to verify compliance with the 90 ppm limit under 16 CFR Part 1303.",
+        "California Proposition 65 Screening: Chemical analysis (e.g., using XRF screening and confirmatory wet chemistry) to identify the presence and concentration of listed chemicals to determine if a warning label is required.",
+        "Heavy Metals in Packaging: Testing to ensure packaging materials comply with TPCH requirements for the sum of four heavy metals to be under 100 ppm."
+      ],
+      "highRiskFlags": [
+        "Uncertified Power Supplies/Adapters: This is a leading cause of fires and electrical hazards. A common red flag is a supplier claiming the adapter is 'UL compliant' because it uses a UL-listed component, which is not the same as the entire power supply unit being certified.",
+        "Overheating and Fire Hazard: Poor thermal management, use of non-flame-retardant plastics (not rated V-0, V-1, or V-2), or inadequate wiring can lead to overheating and fire. This is a primary focus of UL 153 testing.",
+        "Counterfeit Certification Marks: Unauthorized use of UL, ETL, or FCC marks is common. Always verify certification numbers in the official NRTL or FCC databases.",
+        "Instability: Tall or top-heavy lamps can fail the 8-degree tilt stability test in UL 153, posing a tip-over hazard."
+      ],
+      "referenceLinks": [
+        {
+          "name": "CPSC General Certificate of Conformity (GCC)",
+          "url": "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/General-Certificate-of-Conformity-GCC"
+        },
+        {
+          "name": "16 CFR Part 1303 - Lead Paint Ban",
+          "url": "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1303"
+        },
+        {
+          "name": "FCC Supplier's Declaration of Conformity (SDoC)",
+          "url": "https://www.fcc.gov/oet/ea/sdoci"
+        },
+        {
+          "name": "California Proposition 65",
+          "url": "https://oehha.ca.gov/proposition-65"
+        },
+        {
+          "name": "OSHA Nationally Recognized Testing Laboratory (NRTL) Program",
+          "url": "https://www.osha.gov/nationally-recognized-testing-laboratory-program"
+        },
+        {
+          "name": "DOE Energy Efficiency for External Power Supplies",
+          "url": "https://www.ecfr.gov/current/title-10/part-430/subpart-C/section-430.32#p-430.32(w)(1)"
+        },
+        {
+          "name": "Toxics in Packaging Clearinghouse (TPCH)",
+          "url": "https://toxicsinpackaging.org/"
+        }
+      ]
+    },
+    {
+      "id": "wireless_phone_charger",
+      "label": "Qi Wireless Phone Charger",
+      "exampleProducts": [
+        "Qi wireless charging pad",
+        "Wireless charging stand",
+        "3-in-1 wireless charging station for phone, watch, and earbuds",
+        "Car mount wireless phone charger",
+        "Furniture-integrated wireless charger"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "8504.40.9570",
+        "8504.40.9580"
+      ],
+      "requiredRegulations": [
+        "FCC Part 15 Subpart C - Intentional Radiators: Mandatory for devices that intentionally radiate radiofrequency energy. Requires testing, certification by a Telecommunication Certification Body (TCB), and labeling with an FCC ID. (Source: 47 CFR Part 15 Subpart C)",
+        "General Certificate of Conformity (GCC): The US-based importer or manufacturer must issue a GCC certifying that the product complies with all applicable CPSC-enforced safety rules. (Source: 16 CFR Part 1110)",
+        "California Proposition 65 (Safe Drinking Water and Toxic Enforcement Act of 1986): Requires a clear and reasonable warning label if the product exposes individuals to chemicals known to the state of California to cause cancer or reproductive toxicity above established safe harbor levels.",
+        "Energy Efficiency Regulations: The external power supply (AC/DC adapter) is subject to Department of Energy (DOE) Level VI efficiency standards. The product must be certified and registered in the DOE's database. (Source: 10 CFR § 430.32(w))",
+        "Toxic Substances Control Act (TSCA): Importers must certify that all chemical substances in the product comply with TSCA regulations. This is typically managed through a certification statement provided at the time of customs entry. (Source: 15 U.S.C. Chapter 53)"
+      ],
+      "testingRequirements": [
+        "FCC Part 15C Certification Testing: Mandatory testing for radiated and conducted emissions to ensure the device does not cause harmful interference and complies with RF exposure limits. Must be performed by an FCC-accredited test laboratory.",
+        "Electrical Safety Testing (UL/ETL Certification): While voluntary at the federal level, certification to a safety standard like UL 62368-1 is a de-facto requirement for market access, retailer acceptance, and liability mitigation. This applies to both the charger and its AC power adapter.",
+        "Qi Certification (Wireless Power Consortium - WPC): An industry standard, not a legal requirement. Essential for ensuring safety (e.g., foreign object detection), interoperability, and performance. The official Qi logo cannot be used without certification from the WPC.",
+        "California Proposition 65 Chemical Screening: Laboratory testing (e.g., XRF screening, ICP-MS analysis) to determine the concentration of listed chemicals (e.g., lead, cadmium, phthalates) in accessible components to assess if a warning label is required.",
+        "RoHS (Restriction of Hazardous Substances) Compliance Testing: While not a US federal law, compliance is a common requirement from major retailers and a global industry standard. Tests for Lead, Mercury, Cadmium, Hexavalent Chromium, PBBs, and PBDEs."
+      ],
+      "highRiskFlags": [
+        "Overheating and Fire Hazard: A primary safety risk often caused by poor design, low-quality components, or the lack of safety circuits like foreign object detection (FOD) and over-temperature protection. This is a common reason for product recalls.",
+        "Lack of Official Qi Certification: Products advertised as 'Qi-compatible' but not officially certified by the WPC pose risks of slow charging, incompatibility, overheating, and potential damage to the phone's battery.",
+        "FCC Non-Compliance: Failure to obtain proper FCC certification can result in fines, product seizure by U.S. Customs, and sales injunctions. Uncertified devices can interfere with critical radio communications.",
+        "Power Adapter (AC/DC) Safety: The wall adapter is a frequent point of failure and must be certified to UL 62368-1 to prevent electric shock and fire hazards. It must also meet DOE Level VI energy efficiency requirements."
+      ],
+      "referenceLinks": [
+        "https://www.fcc.gov/oet/ea/fccid",
+        "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/General-Certificate-of-Conformity-GCC",
+        "https://oehha.ca.gov/proposition-65",
+        "https://www.ecfr.gov/current/title-10/part-430/subpart-C/section-430.32",
+        "https://www.epa.gov/tsca-import-export-requirements",
+        "https://www.wirelesspowerconsortium.com/products"
+      ]
+    },
+    {
+      "id": "electric_kettle",
+      "label": "Glass Electric Kettle",
+      "exampleProducts": [
+        "Borosilicate Glass Electric Tea Kettle",
+        "LED Illuminated Glass Electric Kettle",
+        "Variable Temperature Glass Electric Water Kettle",
+        "Cordless Glass Electric Kettle with Stainless Steel Base"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "8516.10.00",
+        "8516.79.00"
+      ],
+      "requiredRegulations": [
+        "Consumer Product Safety Act (CPSA) Section 14(a) - Requires a General Certificate of Conformity (GCC) certifying the product complies with all applicable consumer product safety rules. The GCC must be based on a reasonable testing program.",
+        "UL 1082: Standard for Household Electric Coffee Makers and Brewing-Type Appliances - While a voluntary standard, it is the primary standard used by the CPSC and Nationally Recognized Testing Laboratories (NRTLs) to assess the electrical, thermal, and mechanical safety of electric kettles. Compliance is essential for the GCC.",
+        "FDA Food Contact Materials (FCM) Regulations - All materials in contact with water must comply. Key regulations include: 21 CFR § 177.1520 for Olefin polymers (e.g., Polypropylene lids), 21 CFR § 177.2600 for rubber articles intended for repeated use (e.g., silicone seals), and GRAS (Generally Recognized as Safe) status for materials like borosilicate glass and food-grade stainless steel (e.g., 304/316).",
+        "California Proposition 65 (The Safe Drinking Water and Toxic Enforcement Act of 1986) - Requires a clear and reasonable warning if the product can expose consumers to chemicals on the Prop 65 list (e.g., Lead, BPA, Phthalates) above established Safe Harbor Levels.",
+        "47 CFR Part 15 - Radio Frequency Devices: Applies to electric kettles that incorporate digital circuitry (e.g., digital displays, variable temperature controls). These devices are considered unintentional radiators and must not cause harmful electromagnetic interference. Requires a Supplier's Declaration of Conformity (SDoC).",
+        "Note on CPSIA Children's Product Rules: Regulations such as 16 CFR Part 1501 (Small Parts), 16 CFR Part 1303 (Lead in Paint), and 16 CFR Part 1307 (Phthalates) are not applicable as an electric kettle is a general-use product not intended for children 12 years of age or younger."
+      ],
+      "testingRequirements": [
+        "Electrical Safety Testing by a Nationally Recognized Testing Laboratory (NRTL) like UL, Intertek (ETL), or CSA. Testing must be performed to the UL 1082 standard. Key tests include: Dielectric Voltage Withstand (Hi-Pot), Grounding Continuity, Input Power, Temperature/Burn Hazard, Abnormal Operation (e.g., boil-dry protection), and Strain Relief tests for the power cord.",
+        "FDA Food Contact Material Migration Testing: Extraction testing per 21 CFR for all plastic and silicone components that contact water to ensure no harmful substances leach into the water above specified limits.",
+        "California Proposition 65 Screening: Chemical analysis (e.g., using XRF screening and confirmatory wet chemistry) of all accessible components (plastic housing, power cord, internal solder, handle) to identify the presence of lead, cadmium, phthalates, BPA, and other listed chemicals to determine if a warning is required.",
+        "FCC Part 15 Emissions Testing: For models with digital circuitry, testing must be performed by an accredited lab to verify compliance with electromagnetic interference limits as specified in 47 CFR Part 15, Subpart B. This is required for the Supplier's Declaration of Conformity (SDoC).",
+        "Performance and Durability Testing (Quality Assurance): Includes verification of auto-shutoff and boil-dry protection functions, water boiling time, handle and body temperature measurements, lid hinge cycle testing, and leak testing."
+      ],
+      "highRiskFlags": [
+        "Faulty Thermostat/Controller: Use of low-quality controllers (non-Strix or Otter brands) can lead to failure of auto-shutoff or boil-dry protection, posing a significant fire hazard. This is a common cause of recalls.",
+        "Electrical Shock Hazard: Improper wiring, inadequate insulation, or poor strain relief on the power cord can expose live wires, creating a risk of electric shock.",
+        "Material Contamination: Non-compliance with FDA food-grade standards for plastics, silicone, or steel can lead to the migration of harmful chemicals like BPA or heavy metals into the water.",
+        "Burn Hazard: Poor design can result in excessively hot external surfaces, handles, or uncontrolled steam release upon opening the lid."
+      ],
+      "referenceLinks": [
+        "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/General-Certificate-of-Conformity-GCC",
+        "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfcfr/CFRSearch.cfm?CFRPart=177",
+        "https://oehha.ca.gov/proposition-65/proposition-65-list",
+        "https://www.osha.gov/nationally-recognized-testing-laboratory-program/current-list-of-nrtls",
+        "https://www.fcc.gov/oet/ea/sdoc",
+        "https://www.cpsc.gov/Recalls"
+      ]
+    }
+  ]
+}

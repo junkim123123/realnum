@@ -11,7 +11,9 @@ import { useAuth } from '@/lib/auth';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ProductAnalysisFeedback } from '@/components/product-analysis-feedback';
+import { CategoryKnowledgeCards } from '@/components/category-knowledge-cards';
 import SignInModal from '@/components/sign-in-modal';
+import LimitReachedCard from '@/components/LimitReachedCard';
 
 export default function ProductAnalyzer({ source }: { source?: string }) {
   const [input, setInput] = useState('');
@@ -20,12 +22,14 @@ export default function ProductAnalyzer({ source }: { source?: string }) {
   const [isLoading, setIsLoading] = useState(false);
   const [analysis, setAnalysis] = useState<ProductAnalysis | null>(null);
   const [error, setError] = useState('');
+  const [errorReason, setErrorReason] = useState('');
   const [sessionId, setSessionId] = useState('');
   const componentId = useId();
   const formRef = useRef<HTMLFormElement>(null);
   const [isPresetSubmitting, setIsPresetSubmitting] = useState(false);
   const [showSignInModal, setShowSignInModal] = useState(false);
   const { isAuthenticated, userId } = useAuth();
+  const limitHitLoggedRef = useRef(false);
 
   const presets = [
     "Amazon FBA kids water bottle, 500 units to USA",
@@ -83,13 +87,35 @@ export default function ProductAnalyzer({ source }: { source?: string }) {
 
       if (!res.ok) {
         if (data.error === 'quota_exceeded') {
-          setShowSignInModal(true);
+          setErrorReason(data.reason);
+          if (data.reason !== 'anonymous_daily_limit') {
+            setShowSignInModal(true);
+          }
+          // Log limit_hit event (only once per attempt)
+          if (!limitHitLoggedRef.current) {
+            limitHitLoggedRef.current = true;
+            const userType = isAuthenticated ? 'user' : 'anonymous';
+            fetch('/api/limit-events', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                action: 'limit_hit',
+                reason: data.reason,
+                userType,
+                input: input.trim(),
+              }),
+            }).catch((err) => {
+              console.error('[ProductAnalyzer] Failed to log limit_hit event:', err);
+            });
+          }
         }
         throw new Error(data.message || data.error || 'Analysis failed');
       }
 
       setAnalysis(data.analysis);
       logEvent('analyzer_quick_scan_completed', { source, path: 'quick_scan' });
+      // Reset limit hit flag on successful analysis
+      limitHitLoggedRef.current = false;
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong');
     } finally {
@@ -157,6 +183,49 @@ export default function ProductAnalyzer({ source }: { source?: string }) {
     }
 
     if (error) {
+      if (errorReason === 'anonymous_daily_limit' || errorReason === 'user_daily_limit') {
+        const handlePrimaryClick = () => {
+          const userType = isAuthenticated ? 'user' : 'anonymous';
+          fetch('/api/limit-events', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'cta_primary_click',
+              reason: errorReason,
+              userType,
+              input: input.trim(),
+            }),
+          }).catch((err) => {
+            console.error('[ProductAnalyzer] Failed to log cta_primary_click event:', err);
+          });
+        };
+
+        const handleSecondaryClick = () => {
+          const userType = isAuthenticated ? 'user' : 'anonymous';
+          fetch('/api/limit-events', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'cta_secondary_click',
+              reason: errorReason,
+              userType,
+              input: input.trim(),
+            }),
+          }).catch((err) => {
+            console.error('[ProductAnalyzer] Failed to log cta_secondary_click event:', err);
+          });
+        };
+
+        return (
+          <LimitReachedCard
+            variant={errorReason === 'anonymous_daily_limit' ? 'anonymous' : 'user'}
+            alphaSignupUrl={process.env.NEXT_PUBLIC_ALPHA_SIGNUP_URL}
+            bookingUrl={process.env.NEXT_PUBLIC_BOOKING_URL}
+            onPrimaryClick={handlePrimaryClick}
+            onSecondaryClick={handleSecondaryClick}
+          />
+        );
+      }
       return (
         <Card className="text-center border-destructive/50">
           <AlertTriangle className="h-8 w-8 mx-auto text-destructive mb-4" />
@@ -309,6 +378,9 @@ export default function ProductAnalyzer({ source }: { source?: string }) {
                 )}
             </Card>
             )}
+
+          {/* Category Knowledge Cards */}
+          <CategoryKnowledgeCards analysis={analysis} />
 
           {/* Alpha Disclaimer and Feedback */}
           <ProductAnalysisFeedback analysis={analysis} mode="quick_scan" source={source} />

@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "This file contains manually researched category compliance rules. During alpha, we maintain these as versioned JSON files. Each entry should be researched using external tools (Perplexity, GPT, etc.) and follow the same structure. Rename this file to category_rules.json after adding your first real entries.",
+  "categories": [
+    {
+      "id": "baby_teether",
+      "label": "Baby Teether / Infant Teething Toys",
+      "exampleProducts": [
+        "silicone baby teether",
+        "infant teething ring",
+        "baby teething toy with rattle"
+      ],
+      "targetMarkets": [
+        "United States",
+        "European Union",
+        "Canada",
+        "Australia"
+      ],
+      "typicalHtsCodes": [
+        "9503.00.00",
+        "3924.10.00",
+        "4014.90.50"
+      ],
+      "requiredRegulations": [
+        "CPSIA (Consumer Product Safety Improvement Act)",
+        "ASTM F963 (Toy Safety Standard)",
+        "16 CFR Part 1303 (Lead Content)",
+        "CA Prop 65 (if selling to California)"
+      ],
+      "testingRequirements": [
+        "Third-party lab testing for CPSIA compliance required",
+        "Lead content must be below 100 ppm",
+        "Phthalates testing required (8 specific phthalates)",
+        "Small parts testing to ensure no choking hazards",
+        "Tensile strength testing for silicone products"
+      ],
+      "highRiskFlags": [
+        "Products for children under 3 years old are high-risk",
+        "Materials (silicone, rubber) must be food-grade",
+        "Colorants must be non-toxic and FDA-approved",
+        "No BPA, PVC, or phthalates allowed",
+        "Import holds are common if testing documentation is missing"
+      ],
+      "referenceLinks": [
+        "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Baby-Products",
+        "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/Childrens-Products",
+        "https://www.astm.org/Standards/F963.htm"
+      ]
+    },
+    {
+      "id": "stainless_steel_tumbler",
+      "label": "Stainless Steel Tumbler / Water Bottle",
+      "exampleProducts": [
+        "stainless steel insulated water bottle",
+        "double-wall tumbler cup",
+        "stainless steel travel mug"
+      ],
+      "targetMarkets": [
+        "United States",
+        "European Union",
+        "Canada",
+        "United Kingdom"
+      ],
+      "typicalHtsCodes": [
+        "7323.93.00",
+        "9617.00.40",
+        "3926.90.99"
+      ],
+      "requiredRegulations": [
+        "FDA Food Contact Regulations (21 CFR)",
+        "California Prop 65 (if applicable)",
+        "EU REACH (if selling to EU)",
+        "LFGB (if selling to Germany)"
+      ],
+      "testingRequirements": [
+        "Food contact material testing (migration testing)",
+        "Stainless steel grade verification (should be 304 or 316)",
+        "Lead and cadmium content testing",
+        "Leak-proof testing for bottles with lids",
+        "Dishwasher safety testing (if claiming dishwasher safe)"
+      ],
+      "highRiskFlags": [
+        "Must use food-grade stainless steel (304 or 316)",
+        "Any coating or lining must be FDA-approved for food contact",
+        "Claims like 'BPA-free' require documentation",
+        "Custom logos/printing must use food-safe inks",
+        "Vacuum seal integrity is critical for insulation claims"
+      ],
+      "referenceLinks": [
+        "https://www.fda.gov/food/food-ingredients-packaging/food-contact-substances-fcs",
+        "https://www.fda.gov/food/food-ingredients-packaging/fda-regulation-food-contact-substances-how-determine-if-substance-food-contact-substance",
+        "https://oehha.ca.gov/proposition-65"
+      ]
+    }
+  ]
+}
+

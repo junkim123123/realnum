@@ -3,6 +3,7 @@ import ProductAnalyzer from "./(sections)/product-analyzer"
 import HowItWorks from "./(sections)/how-it-works"
 import WhoIsThisFor from "./(sections)/who-is-this-for"
 import Footer from "./(sections)/footer"
+import Link from 'next/link'
 
 export default function Home({
   searchParams,

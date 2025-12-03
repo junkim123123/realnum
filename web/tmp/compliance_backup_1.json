@@ -1,0 +1,307 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "This file contains manually researched category compliance rules. During alpha, we maintain these as versioned JSON files. Each entry should be researched using external tools (Perplexity, GPT, etc.) and follow the same structure. Rename this file to category_rules.json after adding your first real entries.",
+  "categories": [
+    {
+      "id": "baby_teether",
+      "label": "Baby Teether / Infant Teething Toys",
+      "exampleProducts": [
+        "silicone baby teether",
+        "infant teething ring",
+        "baby teething toy with rattle"
+      ],
+      "targetMarkets": [
+        "United States",
+        "European Union",
+        "Canada",
+        "Australia"
+      ],
+      "typicalHtsCodes": [
+        "9503.00.00",
+        "3924.10.00",
+        "4014.90.50"
+      ],
+      "requiredRegulations": [
+        "CPSIA (Consumer Product Safety Improvement Act)",
+        "ASTM F963 (Toy Safety Standard)",
+        "16 CFR Part 1303 (Lead Content)",
+        "CA Prop 65 (if selling to California)"
+      ],
+      "testingRequirements": [
+        "Third-party lab testing for CPSIA compliance required",
+        "Lead content must be below 100 ppm",
+        "Phthalates testing required (8 specific phthalates)",
+        "Small parts testing to ensure no choking hazards",
+        "Tensile strength testing for silicone products"
+      ],
+      "highRiskFlags": [
+        "Products for children under 3 years old are high-risk",
+        "Materials (silicone, rubber) must be food-grade",
+        "Colorants must be non-toxic and FDA-approved",
+        "No BPA, PVC, or phthalates allowed",
+        "Import holds are common if testing documentation is missing"
+      ],
+      "referenceLinks": [
+        "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Baby-Products",
+        "https://www.cpsc.gov/Business--Manufacturing/Testing-Certification/Childrens-Products",
+        "https://www.astm.org/Standards/F963.htm"
+      ]
+    },
+    {
+      "id": "stainless_steel_tumbler",
+      "label": "Stainless Steel Tumbler / Water Bottle",
+      "exampleProducts": [
+        "stainless steel insulated water bottle",
+        "double-wall tumbler cup",
+        "stainless steel travel mug"
+      ],
+      "targetMarkets": [
+        "United States",
+        "European Union",
+        "Canada",
+        "United Kingdom"
+      ],
+      "typicalHtsCodes": [
+        "7323.93.00",
+        "9617.00.40",
+        "3926.90.99"
+      ],
+      "requiredRegulations": [
+        "FDA Food Contact Regulations (21 CFR)",
+        "California Prop 65 (if applicable)",
+        "EU REACH (if selling to EU)",
+        "LFGB (if selling to Germany)"
+      ],
+      "testingRequirements": [
+        "Food contact material testing (migration testing)",
+        "Stainless steel grade verification (should be 304 or 316)",
+        "Lead and cadmium content testing",
+        "Leak-proof testing for bottles with lids",
+        "Dishwasher safety testing (if claiming dishwasher safe)"
+      ],
+      "highRiskFlags": [
+        "Must use food-grade stainless steel (304 or 316)",
+        "Any coating or lining must be FDA-approved for food contact",
+        "Claims like 'BPA-free' require documentation",
+        "Custom logos/printing must use food-safe inks",
+        "Vacuum seal integrity is critical for insulation claims"
+      ],
+      "referenceLinks": [
+        "https://www.fda.gov/food/food-ingredients-packaging/food-contact-substances-fcs",
+        "https://www.fda.gov/food/food-ingredients-packaging/fda-regulation-food-contact-substances-how-determine-if-substance-food-contact-substance",
+        "https://oehha.ca.gov/proposition-65"
+      ]
+    },
+    {
+      "id": "us_baby_teether_toy",
+      "label": "Silicone Baby Teether Toy",
+      "exampleProducts": [
+        "Mushroom Head Silicone Teether",
+        "Giraffe Shaped Silicone Teether",
+        "Silicone Teething Tubes (Hollow Straws)",
+        "Wearable Teething Mitten with Silicone Top",
+        "Silicone and Wood Teething Ring"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "9503.00.00",
+        "3926.90.99"
+      ],
+      "requiredRegulations": [
+        "CPSIA (Consumer Product Safety Improvement Act of 2008) - Applies to all children's products.",
+        "16 CFR Part 1250 - Safety Standard Mandating ASTM F963 for Toys.",
+        "ASTM F963-23 - Standard Consumer Safety Specification for Toy Safety.",
+        "16 CFR Part 1500 - Federal Hazardous Substances Act (FHSA) Regulations, including mechanical and physical hazards like sharp points and edges.",
+        "16 CFR Part 1501 - Small Parts Regulation for toys and articles intended for children under 3 years old.",
+        "16 CFR Part 1303 - Ban of Lead-Containing Paint and Certain Consumer Products Bearing Lead-Containing Paint (Limit: 90 ppm).",
+        "CPSIA Section 101 - Total Lead Content in Substrates of Children's Products (Limit: 100 ppm).",
+        "16 CFR Part 1307 - Prohibition of Children’s Toys and Child Care Articles Containing Specified Phthalates (8 phthalates limited to 0.1%).",
+        "16 CFR Part 1130 - Consumer Product Safety Commission Requirements for Tracking Labels for Children's Products.",
+        "21 CFR 177.2600 - FDA regulation for 'Rubber articles intended for repeated use', applicable to food-grade silicone.",
+        "California Proposition 65 - Safe Drinking Water and Toxic Enforcement Act of 1986."
+      ],
+      "testingRequirements": [
+        "Third-party testing by a CPSC-accepted laboratory is mandatory for children's products.",
+        "ASTM F963-23 Physical & Mechanical Tests: Use and abuse (impact, torque, tension), sharp points/edges, small parts analysis.",
+        "ASTM F963-23 Chemical Tests: Soluble heavy metals content in substrate materials (8 elements: Antimony, Arsenic, Barium, Cadmium, Chromium, Lead, Mercury, Selenium).",
+        "ASTM F963-23 Flammability of Solids (incorporates 16 CFR § 1500.44).",
+        "Total Lead Content in Substrate per CPSIA Section 101 (100 ppm limit).",
+        "Phthalates Content Test per 16 CFR Part 1307 (8 specific phthalates, 0.1% limit per phthalate).",
+        "Small Parts Test per 16 CFR 1501 - The teether and any detached parts must not fit into the small parts test cylinder.",
+        "FDA Extraction Testing per 21 CFR 177.2600 for products marketed as 'food-grade', to ensure no harmful substances leach into water or fatty foods.",
+        "A Children's Product Certificate (CPC) must be issued by the importer or US manufacturer, based on passing test results from a CPSC-accepted lab."
+      ],
+      "highRiskFlags": [
+        "Choking Hazard: Small pieces breaking off during use is a primary recall reason. Durability and tension tests are critical.",
+        "Material Purity: Use of non-food-grade silicone or silicone with fillers can lead to chemical leaching and test failures for heavy metals or FDA compliance.",
+        "Hollow Designs: Teethers with hollow parts can trap water and saliva, leading to mold and bacteria growth if not designed with drainage or for easy disassembly and cleaning.",
+        "Incorrect Age Grading: Labeling a product for an incorrect age can lead to misuse and safety incidents. Teethers are for children under 3, invoking the small parts regulation.",
+        "Strangulation Hazard: Teethers with cords, strings, or loops that could fit around a child's neck are prohibited or have strict length requirements under ASTM F963."
+      ],
+      "referenceLinks": [
+        "https://www.cpsc.gov/Business--Manufacturing/Business-Education/Business-Guidance/Childrens-Products",
+        "https://www.cpsc.gov/cgi-bin/labsearch/",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1250",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-C/part-1501",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1307",
+        "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177/subpart-C/section-177.2600",
+        "https://oehha.ca.gov/proposition-65"
+      ]
+    },
+    {
+      "id": "auto_category_1",
+      "label": "Passenger Vehicles",
+      "exampleProducts": [
+        "Sedan",
+        "Sport Utility Vehicle (SUV)",
+        "Electric Car",
+        "Hatchback",
+        "Pickup Truck"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "8703.23.00",
+        "8703.24.00",
+        "8703.80.00",
+        "8703.90.00"
+      ],
+      "requiredRegulations": [
+        "National Highway Traffic Safety Administration (NHTSA) Regulations: All passenger vehicles must comply with all applicable Federal Motor Vehicle Safety Standards (FMVSS) as specified in 49 CFR Part 571.",
+        "Environmental Protection Agency (EPA) Regulations: Vehicles must meet federal emissions standards under 40 CFR Parts 85, 86, and 600. Importers must submit EPA Form 3520-1 upon entry.",
+        "NHTSA Importation Requirements: Importers must submit NHTSA Form HS-7 at the port of entry to declare FMVSS compliance.",
+        "American Automobile Labeling Act (AALA): Requires labeling specifying the percentage of U.S./Canadian parts content, the final assembly point, and the country of origin for the engine and transmission (49 CFR Part 583).",
+        "California Air Resources Board (CARB): Stricter emissions standards that apply to vehicles sold in California and other states that have adopted California's standards under Section 177 of the Clean Air Act. Requires a specific Executive Order (EO) number for compliance.",
+        "California Proposition 65 (Safe Drinking Water and Toxic Enforcement Act of 1986): Requires businesses to provide warnings to Californians about significant exposures to chemicals that cause cancer, birth defects or other reproductive harm.",
+        "NOTE: CPSC regulations such as CPSIA, 16 CFR Part 1501 (small parts), and 16 CFR Parts 1303/1307 (lead/phthalates) do NOT apply to passenger vehicles. They apply to children's products, which could include vehicle accessories like car seats or toys sold with the vehicle."
+      ],
+      "testingRequirements": [
+        "FMVSS Compliance Testing: Mandatory third-party or first-party (with sufficient data) testing to prove compliance with all applicable standards. Key examples include:",
+        "FMVSS 208: Occupant Crash Protection (including front and side impact crash tests).",
+        "FMVSS 108: Lamps, Reflective Devices, and Associated Equipment.",
+        "FMVSS 135: Light Vehicle Brake Systems.",
+        "FMVSS 214: Side Impact Protection.",
+        "FMVSS 301: Fuel System Integrity.",
+        "FMVSS 305: Electric Powered Vehicles: Electrolyte Spillage and Electrical Shock Protection (for EVs).",
+        "EPA Emissions Testing: Vehicle must undergo testing according to the Federal Test Procedure (FTP) to receive an EPA Certificate of Conformity.",
+        "On-Board Diagnostics (OBD-II) Verification: System must be tested and validated per EPA and CARB requirements.",
+        "AALA Content Verification: Audit and verification of the supply chain to determine parts content percentages for labeling."
+      ],
+      "highRiskFlags": [
+        "Non-Conforming Vehicles: Attempting to import a vehicle not originally manufactured to meet US standards (a 'gray market' vehicle) is extremely difficult and costly to bring into compliance.",
+        "Incomplete Documentation: Failure to provide a valid EPA Form 3520-1 and NHTSA Form HS-7 at the time of import will result in the vehicle being denied entry.",
+        "Lack of Manufacturer Support: The original manufacturer must certify compliance. A vehicle from a manufacturer with no official US presence or designated agent to handle recalls is a major red flag.",
+        "Emissions Failures: A vehicle that cannot pass EPA and/or CARB emissions testing cannot be legally sold or registered in the respective states."
+      ],
+      "referenceLinks": [
+        "https://www.nhtsa.gov/importing-vehicle",
+        "https://www.epa.gov/importing-vehicles-and-engines",
+        "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-V/part-571",
+        "https://ww2.arb.ca.gov/",
+        "https://oehha.ca.gov/proposition-65"
+      ]
+    },
+    {
+      "id": "auto_category_2",
+      "label": "Automotive Filters",
+      "exampleProducts": [
+        "Spin-on engine oil filter",
+        "Cartridge-style engine oil filter",
+        "Panel-type engine air filter",
+        "Activated carbon cabin air filter",
+        "In-line gasoline fuel filter"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "8421.23.00",
+        "8421.31.00",
+        "8421.39.80",
+        "8421.99.00"
+      ],
+      "requiredRegulations": [
+        "California Proposition 65: Requires a warning label if the product contains chemicals known to the state to cause cancer or reproductive toxicity above safe harbor levels.",
+        "National Traffic and Motor Vehicle Safety Act: Imposes a general duty on manufacturers to ensure their products are free of safety-related defects. A faulty filter causing a fuel leak or engine failure is a safety defect under NHTSA jurisdiction.",
+        "FTC 'Made in USA' Standard: If marketed as such, the product must be 'all or virtually all' made in the United States.",
+        "EPA Regulations (40 CFR Part 279): While not a regulation on the sale of new filters, these rules govern the management and disposal of used oil and oil filters, which can influence product design and marketing."
+      ],
+      "testingRequirements": [
+        "Performance Testing (Industry Standard): Testing to SAE/ISO standards is critical to ensure product function, safety, and mitigate liability risk.",
+        "Oil Filter Testing (ISO 4548 / SAE J1858): Includes multipass filtration efficiency and capacity, burst pressure, impulse fatigue, and bubble leak tests.",
+        "Air Filter Testing (ISO 5011 / SAE J726): Measures filtration efficiency, dust holding capacity, and airflow restriction.",
+        "Fuel Filter Testing (ISO 19438 / SAE J905): Measures filtration efficiency, pressure drop, and structural integrity.",
+        "Cabin Air Filter Testing (ISO 11155): Measures particulate filtration efficiency.",
+        "California Proposition 65 Screening: Chemical analysis (e.g., XRF, GC-MS) to determine if concentrations of listed chemicals (e.g., lead, BPA, phthalates) require a warning label."
+      ],
+      "highRiskFlags": [
+        "Fuel or Oil Leaks: A cracked housing or failed seal can lead to fluid leaks, creating a significant fire hazard and risk of engine seizure. This is a primary cause for NHTSA recalls.",
+        "Filter Media Failure: Low-quality media can collapse or tear, releasing contaminants into the engine and causing catastrophic damage.",
+        "Burst Failure: Inadequate canister strength or seaming can lead to a burst under pressure, causing a sudden and total loss of oil.",
+        "Incorrect Fitment: Poor dimensional tolerances can result in improper sealing, allowing unfiltered fluid to bypass the filter."
+      ],
+      "referenceLinks": [
+        "https://www.nhtsa.gov/recalls",
+        "https://oehha.ca.gov/proposition-65",
+        "https://www.ftc.gov/business-guidance/enforcement/complying-made-usa-standard",
+        "https://www.iso.org/committee/48456.html",
+        "https://www.sae.org/standards"
+      ]
+    },
+    {
+      "id": "stainless_steel_water_bottle",
+      "label": "Stainless Steel Water Bottle",
+      "exampleProducts": [
+        "Insulated stainless steel water bottle",
+        "Vacuum-sealed thermal flask",
+        "Stainless steel sports bottle with straw lid",
+        "Wide-mouth stainless steel canteen"
+      ],
+      "targetMarkets": [
+        "United States"
+      ],
+      "typicalHtsCodes": [
+        "7323.93.00",
+        "9617.00.10"
+      ],
+      "requiredRegulations": [
+        "FDA Food Contact Materials Regulations: All materials in contact with beverages must comply. Key regulations include 21 CFR 177.2600 for silicone gaskets, 21 CFR 177.1520 for polypropylene lids, and the GRAS (Generally Recognized as Safe) status for 304/18-8 stainless steel.",
+        "Consumer Product Safety Improvement Act (CPSIA): If marketed as a 'children's product' (for ages 12 and under), it requires a Children's Product Certificate (CPC), third-party testing by a CPSC-accepted lab, and permanent tracking labels.",
+        "16 CFR Part 1303 - Ban of Lead-Containing Paint and Certain Consumer Products Bearing Lead-Containing Paint: Surface coatings on the bottle must not contain lead in excess of 90 ppm.",
+        "CPSIA Section 101 - Total Lead Content: Accessible substrate materials of children's products must not contain more than 100 ppm of lead.",
+        "16 CFR Part 1307 - Prohibition of Children's Toys and Child Care Articles Containing Specified Phthalates: Accessible plastic parts (lids, straws) of children's products must not contain more than 0.1% of 8 specified phthalates.",
+        "16 CFR Part 1501 - Small Parts Regulation: If intended for children under 3, any detachable components must not fit into the CPSC small parts cylinder, as they would present a choking hazard.",
+        "16 CFR Part 1500 - Federal Hazardous Substances Act (FHSA): Requires that children's products not present mechanical hazards such as sharp points (16 CFR 1500.48) or sharp edges (16 CFR 1500.49).",
+        "California Proposition 65 (The Safe Drinking Water and Toxic Enforcement Act of 1986): Requires a warning label if the product exposes consumers to chemicals like lead, cadmium, or BPA above specified 'safe harbor' levels.",
+        "19 CFR Part 134 - Country of Origin Marking: Requires the product to be conspicuously and indelibly marked with its country of origin (e.g., 'Made in China') in English."
+      ],
+      "testingRequirements": [
+        "FDA 21 CFR Migration Testing: Extraction testing on all food-contact components (stainless steel body, plastic lid, silicone seal) to ensure no harmful chemicals leach into the contents.",
+        "Total Lead Content in Substrates (CPSC-CH-E1001-08.3 for metals, CPSC-CH-E1002-08.3 for non-metals) - Mandatory for children's products.",
+        "Lead in Paint and Surface Coatings (16 CFR Part 1303 / CPSC-CH-E1003-09.1) - Mandatory for any painted or coated areas on children's products.",
+        "Phthalate Content Analysis (CPSC-CH-C1001-09.4) - Mandatory for plastic components of children's products.",
+        "Small Parts Testing (16 CFR Part 1501) - Mandatory if the product is intended for children under 3.",
+        "Mechanical Hazard Testing: Sharp points (16 CFR 1500.48) and sharp edges (16 CFR 1500.49) for children's products.",
+        "California Proposition 65 Screening: Chemical analysis for lead, cadmium, BPA, and other relevant substances to determine if a warning label is required.",
+        "Thermal Performance Test: A quality/performance test, not a regulatory requirement, to verify insulation claims (e.g., 'keeps cold for 24 hours')."
+      ],
+      "highRiskFlags": [
+        "Lead Solder Sealing Point: A small solder point at the bottom of the bottle, often covered by a cap or disk, used to seal the vacuum. This is a common source of lead contamination and a major cause of recalls.",
+        "Use of Non-Food-Grade Stainless Steel: Use of 201 stainless steel instead of food-grade 304 (18/8) or 316. 201 steel has lower nickel content and is more prone to rust.",
+        "Lead in Exterior Paints/Decorations: Decorative logos and coatings can contain lead exceeding the 90 ppm limit.",
+        "Detachable Small Parts: Silicone mouthpieces, straw tips, or decorative elements on lids can detach and pose a choking hazard for young children."
+      ],
+      "referenceLinks": [
+        "https://www.cpsc.gov/Business--Manufacturing/Business-Education/childrens-products",
+        "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-177",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1303",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-B/part-1307",
+        "https://www.ecfr.gov/current/title-16/chapter-II/subchapter-C/part-1501",
+        "https://oehha.ca.gov/proposition-65/proposition-65-list"
+      ]
+    }
+  ]
+}

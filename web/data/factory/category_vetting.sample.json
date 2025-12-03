@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "This file contains manually researched factory vetting hints for different product categories. During alpha, we maintain these as versioned JSON files. Each entry should be researched using external tools (Perplexity, GPT, etc.) and follow the same structure. Rename this file to category_vetting.json after adding your first real entries.",
+  "categories": [
+    {
+      "id": "baby_teether",
+      "label": "Baby Teether / Infant Teething Toys",
+      "typicalSupplierTypes": [
+        "OEM (Original Equipment Manufacturer)",
+        "ODM (Original Design Manufacturer) with toy safety expertise",
+        "Specialized silicone/rubber molding factories"
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001 (Quality Management)",
+        "BSCI or SA8000 (Social Compliance)",
+        "CPSIA Testing Lab Certificate",
+        "FDA Registration (if using food-grade materials)"
+      ],
+      "niceToHaveCertificates": [
+        "ISO 14001 (Environmental Management)",
+        "GOTS (if using organic materials)",
+        "OEKO-TEX (for textile components)",
+        "SEDEX/SMETA Audit"
+      ],
+      "sampleQuestionsToFactory": [
+        "Do you have CPSIA-compliant testing documentation from a CPSC-accepted lab?",
+        "What grade of silicone do you use? Can you provide a certificate of analysis (COA)?",
+        "Have you manufactured baby products before? Can you share case studies or references?",
+        "What is your process for ensuring no small parts break off during testing?",
+        "Do you have a quality control process for phthalates and heavy metals?",
+        "Can you provide a sample and full testing report before production?"
+      ],
+      "commonRedFlags": [
+        "Factory cannot provide recent third-party test reports",
+        "Factory has never manufactured children's products before",
+        "Unusually low pricing (may indicate cutting corners on materials)",
+        "Cannot provide material certificates or COAs",
+        "No understanding of CPSIA requirements",
+        "Factory refuses to sign a quality agreement or warranty",
+        "No clear process for handling product recalls"
+      ],
+      "recommendedAlibabaFilters": [
+        "Trade Assurance verified",
+        "Gold Supplier (3+ years)",
+        "Response time: < 24 hours",
+        "Factory location: Guangdong, Zhejiang (have more experience with export regulations)",
+        "Certifications: ISO 9001, BSCI",
+        "Product categories: Baby Products, Toys"
+      ]
+    },
+    {
+      "id": "stainless_steel_tumbler",
+      "label": "Stainless Steel Tumbler / Water Bottle",
+      "typicalSupplierTypes": [
+        "OEM specializing in metal fabrication",
+        "ODM with experience in food-grade products",
+        "Factories with vacuum flask manufacturing capability"
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001 (Quality Management)",
+        "Food Contact Material Certification",
+        "FDA Registration (if claiming FDA compliance)",
+        "BSCI or equivalent social compliance audit"
+      ],
+      "niceToHaveCertificates": [
+        "ISO 14001 (Environmental Management)",
+        "SEDEX/SMETA Audit",
+        "WRAP Certification",
+        "BSCI Grade A or B"
+      ],
+      "sampleQuestionsToFactory": [
+        "What grade of stainless steel do you use? Can you provide a material certificate?",
+        "Do you have FDA food contact testing documentation?",
+        "Can you provide a sample with your logo and test it for lead/cadmium migration?",
+        "What is your minimum order quantity (MOQ) and lead time?",
+        "Do you have experience exporting to [target market]? Any compliance issues in the past?",
+        "Can you provide references from other brands you've worked with?",
+        "What is your process for ensuring vacuum seal integrity?"
+      ],
+      "commonRedFlags": [
+        "Cannot specify stainless steel grade (should be 304 or 316)",
+        "No food contact material certification",
+        "Unusually cheap pricing (may indicate lower-grade materials)",
+        "Factory cannot provide material certificates",
+        "No experience with food-grade products",
+        "Cannot provide leak-proof or vacuum seal testing reports",
+        "No clear process for handling defects or returns"
+      ],
+      "recommendedAlibabaFilters": [
+        "Trade Assurance verified",
+        "Gold Supplier (2+ years)",
+        "Response time: < 24 hours",
+        "Factory location: Guangdong, Zhejiang",
+        "Certifications: ISO 9001, BSCI",
+        "Product categories: Kitchen, Dining & Bar, Vacuum Flasks & Thermoses"
+      ]
+    }
+  ]
+}
+

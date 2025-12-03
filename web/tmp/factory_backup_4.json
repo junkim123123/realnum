@@ -1,0 +1,378 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "This file contains manually researched factory vetting hints for different product categories. During alpha, we maintain these as versioned JSON files. Each entry should be researched using external tools (Perplexity, GPT, etc.) and follow the same structure. Rename this file to category_vetting.json after adding your first real entries.",
+  "categories": [
+    {
+      "id": "baby_teether",
+      "label": "Baby Teether / Infant Teething Toys",
+      "typicalSupplierTypes": [
+        "OEM (Original Equipment Manufacturer)",
+        "ODM (Original Design Manufacturer) with toy safety expertise",
+        "Specialized silicone/rubber molding factories"
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001 (Quality Management)",
+        "BSCI or SA8000 (Social Compliance)",
+        "CPSIA Testing Lab Certificate",
+        "FDA Registration (if using food-grade materials)"
+      ],
+      "niceToHaveCertificates": [
+        "ISO 14001 (Environmental Management)",
+        "GOTS (if using organic materials)",
+        "OEKO-TEX (for textile components)",
+        "SEDEX/SMETA Audit"
+      ],
+      "sampleQuestionsToFactory": [
+        "Do you have CPSIA-compliant testing documentation from a CPSC-accepted lab?",
+        "What grade of silicone do you use? Can you provide a certificate of analysis (COA)?",
+        "Have you manufactured baby products before? Can you share case studies or references?",
+        "What is your process for ensuring no small parts break off during testing?",
+        "Do you have a quality control process for phthalates and heavy metals?",
+        "Can you provide a sample and full testing report before production?"
+      ],
+      "commonRedFlags": [
+        "Factory cannot provide recent third-party test reports",
+        "Factory has never manufactured children's products before",
+        "Unusually low pricing (may indicate cutting corners on materials)",
+        "Cannot provide material certificates or COAs",
+        "No understanding of CPSIA requirements",
+        "Factory refuses to sign a quality agreement or warranty",
+        "No clear process for handling product recalls"
+      ],
+      "recommendedAlibabaFilters": [
+        "Trade Assurance verified",
+        "Gold Supplier (3+ years)",
+        "Response time: < 24 hours",
+        "Factory location: Guangdong, Zhejiang (have more experience with export regulations)",
+        "Certifications: ISO 9001, BSCI",
+        "Product categories: Baby Products, Toys"
+      ]
+    },
+    {
+      "id": "stainless_steel_tumbler",
+      "label": "Stainless Steel Tumbler / Water Bottle",
+      "typicalSupplierTypes": [
+        "OEM specializing in metal fabrication",
+        "ODM with experience in food-grade products",
+        "Factories with vacuum flask manufacturing capability"
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001 (Quality Management)",
+        "Food Contact Material Certification",
+        "FDA Registration (if claiming FDA compliance)",
+        "BSCI or equivalent social compliance audit"
+      ],
+      "niceToHaveCertificates": [
+        "ISO 14001 (Environmental Management)",
+        "SEDEX/SMETA Audit",
+        "WRAP Certification",
+        "BSCI Grade A or B"
+      ],
+      "sampleQuestionsToFactory": [
+        "What grade of stainless steel do you use? Can you provide a material certificate?",
+        "Do you have FDA food contact testing documentation?",
+        "Can you provide a sample with your logo and test it for lead/cadmium migration?",
+        "What is your minimum order quantity (MOQ) and lead time?",
+        "Do you have experience exporting to [target market]? Any compliance issues in the past?",
+        "Can you provide references from other brands you've worked with?",
+        "What is your process for ensuring vacuum seal integrity?"
+      ],
+      "commonRedFlags": [
+        "Cannot specify stainless steel grade (should be 304 or 316)",
+        "No food contact material certification",
+        "Unusually cheap pricing (may indicate lower-grade materials)",
+        "Factory cannot provide material certificates",
+        "No experience with food-grade products",
+        "Cannot provide leak-proof or vacuum seal testing reports",
+        "No clear process for handling defects or returns"
+      ],
+      "recommendedAlibabaFilters": [
+        "Trade Assurance verified",
+        "Gold Supplier (2+ years)",
+        "Response time: < 24 hours",
+        "Factory location: Guangdong, Zhejiang",
+        "Certifications: ISO 9001, BSCI",
+        "Product categories: Kitchen, Dining & Bar, Vacuum Flasks & Thermoses"
+      ]
+    },
+    {
+      "id": "us_baby_teether_toy",
+      "label": "Silicone Baby Teether Toy",
+      "typicalSupplierTypes": [
+        "Specialized Silicone Product Manufacturer (focus on baby, kitchen, or medical items)",
+        "ODM (Original Design Manufacturer) with existing teether molds",
+        "OEM (Original Equipment Manufacturer) for custom designs"
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001:2015 (Quality Management System)",
+        "BSCI (Business Social Compliance Initiative) or SMETA (Sedex Members Ethical Trade Audit) report for social compliance.",
+        "Recent (within 1-2 years) CPSC/ASTM F963/CPSIA test reports for similar silicone products for the US market."
+      ],
+      "niceToHaveCertificates": [
+        "ISO 13485 (Medical Devices - Quality Management)",
+        "GMP (Good Manufacturing Practice) Certification",
+        "LFGB Certification (German food contact standard, often indicates higher quality silicone)"
+      ],
+      "sampleQuestionsToFactory": [
+        "Can you provide a recent, complete ASTM F963 and CPSIA test report for a silicone teether you produced for another US client?",
+        "What grade of silicone do you use? Is it platinum-cured or peroxide-cured? Can you provide the raw material specification sheet?",
+        "What is your in-process quality control for detecting molding defects like flash, sink marks, or air bubbles?",
+        "Can you share your most recent BSCI or SMETA audit summary page?",
+        "Do you perform any in-house durability tests, such as pull tests, on every production batch?",
+        "Are you registered with the FDA as a food-contact article manufacturer?"
+      ],
+      "commonRedFlags": [
+        "Supplier cannot provide any valid US market test reports or provides an old/incomplete one.",
+        "Price is significantly lower than competitors, suggesting use of cheap fillers or low-grade silicone.",
+        "Supplier claims their products are 'FDA Approved'. The FDA does not approve teethers; materials can be 'FDA compliant'. This indicates a lack of regulatory understanding.",
+        "Unwillingness to provide social compliance audit reports (BSCI/SMETA).",
+        "Poor communication or lack of transparency about their production process and raw material sourcing.",
+        "A messy or disorganized production environment visible in factory photos or videos."
+      ],
+      "recommendedAlibabaFilters": [
+        "Verified Supplier",
+        "Trade Assurance",
+        "Supplier has 'BSCI' or 'ISO 9001' listed in their profile.",
+        "Search keywords: 'food grade silicone teether', 'ASTM F963 teether', 'LFGB silicone teether'."
+      ]
+    },
+    {
+      "id": "auto_category_1",
+      "label": "Passenger Vehicles",
+      "typicalSupplierTypes": [
+        "Original Equipment Manufacturer (OEM)",
+        "Contract Manufacturer (for specialized/low-volume vehicles)",
+        "Tier 1 Supplier (for major systems like powertrains, electronics)",
+        "Tier 2 Supplier (for components)"
+      ],
+      "mustHaveCertificates": [
+        "IATF 16949:2016 (The global quality management system standard for the automotive industry)",
+        "ISO 9001:2015 (General Quality Management System)",
+        "Evidence of EPA Certificate of Conformity for specific models",
+        "Evidence of successful FMVSS compliance testing from accredited labs"
+      ],
+      "niceToHaveCertificates": [
+        "ISO 14001 (Environmental Management)",
+        "ISO 45001 (Occupational Health and Safety)",
+        "SMETA (Sedex Members Ethical Trade Audit) or BSCI (Business Social Compliance Initiative) for social accountability."
+      ],
+      "sampleQuestionsToFactory": [
+        "Can you provide your current IATF 16949 certificate and the most recent audit report?",
+        "Please provide the complete list of applicable FMVSS standards this vehicle has been tested and certified for, along with the lab reports.",
+        "Can you provide the EPA Certificate of Conformity and the CARB Executive Order number for this model year?",
+        "What is your process for Production Part Approval Process (PPAP) with your Tier 1 suppliers?",
+        "How do you ensure traceability for critical safety components like airbags, brake systems, and chassis welds?",
+        "Do you have an established US entity to act as the importer of record and handle potential recalls as required by US law?"
+      ],
+      "commonRedFlags": [
+        "No IATF 16949 certification. This is a non-negotiable standard for any legitimate automotive manufacturer.",
+        "Vague answers about FMVSS or EPA compliance, or claims that a vehicle for another market is 'close enough' for the US.",
+        "Inability to provide detailed test reports from accredited laboratories.",
+        "Lack of a robust recall and warranty plan for the US market.",
+        "No prior experience exporting complete vehicles to the United States.",
+        "Unusually low pricing, which may indicate non-compliant components or materials were used."
+      ],
+      "recommendedAlibabaFilters": [
+        "NOTE: Sourcing fully compliant, road-legal passenger vehicles for the US market on platforms like Alibaba is extremely high-risk and not a standard industry practice. The platform is more suitable for parts or accessories.",
+        "If researching specialized manufacturers, prioritize: 'IATF 16949' in supplier certifications.",
+        "Filter for 'Verified' suppliers with a long operational history (e.g., 10+ years).",
+        "Review supplier's main markets to see if 'North America' is a significant export destination.",
+        "Insist on video factory tours and third-party audits before any engagement."
+      ]
+    },
+    {
+      "id": "auto_category_2",
+      "label": "Automotive Filters",
+      "typicalSupplierTypes": [
+        "Aftermarket Manufacturers",
+        "OEM/OES (Original Equipment Manufacturer/Supplier) Factories"
+      ],
+      "mustHaveCertificates": [
+        "IATF 16949: The global quality management standard for the automotive industry. This is the most critical certification.",
+        "ISO 9001: A general quality management system standard, often a prerequisite for IATF 16949."
+      ],
+      "niceToHaveCertificates": [
+        "ISO 14001: Environmental Management System.",
+        "SMETA (Sedex Members Ethical Trade Audit): Demonstrates social and ethical compliance.",
+        "BSCI (Business Social Compliance Initiative): Another leading social compliance certification."
+      ],
+      "sampleQuestionsToFactory": [
+        "Can you provide your current IATF 16949 certificate and the name of the certifying body?",
+        "What specific ISO and SAE standards do you use to validate the performance of your oil filters (e.g., ISO 4548-12)?",
+        "Can you provide a sample test report from a recent production batch for a filter similar to the one we need?",
+        "Describe your in-line quality control process, specifically how you perform 100% leak testing on every oil and fuel filter.",
+        "Who are your primary suppliers for raw materials like filter media, steel canisters, and rubber gaskets?",
+        "What is your product traceability system? Can you trace a single filter back to its raw material batches?"
+      ],
+      "commonRedFlags": [
+        "No IATF 16949 Certification: A major red flag indicating the factory does not meet the stringent quality standards of the automotive supply chain.",
+        "Vague Performance Claims: Using terms like 'OEM-quality' without providing specific test data (e.g., beta ratios, efficiency percentages) to back it up.",
+        "Inability to Provide Test Reports: A reputable factory should readily provide detailed performance and validation test reports.",
+        "Lack of 100% Leak Testing: For pressurized filters (oil, fuel), anything less than 100% leak testing on the production line is unacceptable.",
+        "Unusually Low Price: Prices significantly below the market average often point to the use of inferior filter media, thinner steel, or poor quality seals."
+      ],
+      "recommendedAlibabaFilters": [
+        "Verified Supplier",
+        "IATF 16949",
+        "ISO 9001",
+        "Trade Assurance"
+      ]
+    },
+    {
+      "id": "stainless_steel_water_bottle",
+      "label": "Stainless Steel Water Bottle",
+      "typicalSupplierTypes": [
+        "ODM (Original Design Manufacturer): Most common; they have existing designs you can private label.",
+        "OEM (Original Equipment Manufacturer): They manufacture based on your specific designs and tooling.",
+        "Specialized Drinkware Factories: Factories focusing exclusively on vacuum flasks and stainless steel vessels, often possessing greater technical expertise."
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001:2015: For a certified Quality Management System.",
+        "Social Compliance Audit Report (BSCI or SMETA): Demonstrates ethical labor practices. Most major retailers will require this."
+      ],
+      "niceToHaveCertificates": [
+        "ISO 14001: For Environmental Management Systems.",
+        "NSF/ANSI 51: Certification for food equipment materials, indicates a high standard of material safety.",
+        "GRS (Global Recycled Standard): If you plan to market the use of recycled stainless steel."
+      ],
+      "sampleQuestionsToFactory": [
+        "What specific grade of stainless steel do you use for the inner wall that contacts the liquid? Is it 304 (18/8) or 316?",
+        "Can you provide complete, unedited third-party test reports for FDA 21 CFR compliance for all food-contact materials (steel, plastic lid, silicone seal)?",
+        "What method do you use to seal the vacuum point on the bottom of the bottle? Can you confirm it is a 100% lead-free process and provide documentation?",
+        "Can you share your most recent BSCI or SMETA audit report, including the summary and CAP (Corrective Action Plan)?",
+        "What is your standard procedure for leak testing and thermal insulation testing during production?"
+      ],
+      "commonRedFlags": [
+        "Vague or evasive answers about the grade of stainless steel (e.g., 'food grade steel' without specifying '304' or '18/8').",
+        "Inability or unwillingness to provide recent, complete test reports from accredited labs like SGS, Intertek, or TUV.",
+        "Unusually low pricing, which often indicates the use of inferior materials like 201 steel or cutting corners on quality control.",
+        "Refusal to disclose their vacuum sealing method or confirm it is lead-free.",
+        "Lack of a valid social compliance audit (BSCI, SMETA), or providing an expired or falsified report."
+      ],
+      "recommendedAlibabaFilters": [
+        "Verified Supplier",
+        "Trade Assurance",
+        "Supplier has been assessed onsite by a third-party inspection company (e.g., SGS, TUV Rheinland).",
+        "Minimum 3-5 years of experience manufacturing this specific product category.",
+        "Filter by suppliers who list 'BSCI' or 'ISO9001' in their company profile."
+      ]
+    },
+    {
+      "id": "led_desk_lamp_with_usb_charging",
+      "label": "LED Desk Lamp with USB Charging Port",
+      "typicalSupplierTypes": [
+        "ODM (Original Design Manufacturer): Most common type. They offer pre-designed lamps that can be customized with branding and minor modifications.",
+        "Specialized LED Lighting Factories: Factories that focus exclusively on manufacturing various types of LED lights, possessing deep expertise in thermal management, optics, and power drivers.",
+        "OEM (Original Equipment Manufacturer): For buyers with unique, proprietary designs who require a factory to manufacture to their exact specifications."
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001:2015: For a quality management system. This is a baseline requirement for process control and consistency.",
+        "Proof of previous NRTL Certifications (UL or ETL): The factory must provide evidence (e.g., valid certificate numbers, test reports for similar models) that they have successfully manufactured products certified for the US market.",
+        "Proof of previous FCC Compliance: The factory should have experience and be able to provide SDoC examples or test reports for similar electronic products."
+      ],
+      "niceToHaveCertificates": [
+        "BSCI (Business Social Compliance Initiative) Audit Report: Demonstrates adherence to social and ethical labor standards.",
+        "SMETA (Sedex Members Ethical Trade Audit) Report: Another widely recognized social compliance audit.",
+        "ISO 14001: Environmental Management System certification."
+      ],
+      "sampleQuestionsToFactory": [
+        "Can you provide the valid UL or ETL certificate number for this exact model or a similar model sold in the US? Please provide the link to the public certification directory.",
+        "What brand of LED chips and power driver do you use in this lamp? Can you provide their specification sheets?",
+        "Do you perform 100% production line testing, including a Hi-Pot (dielectric strength) test and an aging test for every unit? If so, for how long is the aging test?",
+        "Can you provide a Bill of Materials (BOM) that specifies the flammability rating (e.g., V-0) of all plastic components?",
+        "Are you able to provide a California Proposition 65 compliance statement or a full material declaration for this product?"
+      ],
+      "commonRedFlags": [
+        "Vague terminology like 'UL-compliant' or 'meets UL standards' instead of 'UL Listed' or 'UL Certified'. This often means the product is not actually certified.",
+        "Inability or unwillingness to provide a valid, verifiable NRTL certificate number for a similar product.",
+        "No experience exporting to North America. These suppliers are often unfamiliar with NRTL, FCC, and packaging requirements.",
+        "An unusually low price, which often indicates the use of low-quality, uncertified components (especially the power driver), or cutting corners on safety testing.",
+        "Lack of a robust quality control system (e.g., no incoming component inspection, no in-process Hi-Pot testing)."
+      ],
+      "recommendedAlibabaFilters": [
+        "Supplier Type: Verified Supplier",
+        "Product Certification: Search keywords within the product search bar like 'UL Listed desk lamp' or 'ETL certified desk lamp'. Do not rely on the filter checkboxes as they can be inaccurate.",
+        "Management Certification: ISO 9001",
+        "Supplier's Main Markets: North America",
+        "Feature: Trade Assurance"
+      ]
+    },
+    {
+      "id": "wireless_phone_charger",
+      "label": "Qi Wireless Phone Charger",
+      "typicalSupplierTypes": [
+        "ODM (Original Design Manufacturer): Offers pre-existing, tested designs that can be private-labeled. This is often the fastest route to market.",
+        "OEM (Original Equipment Manufacturer): Builds products based on the buyer's custom design specifications.",
+        "Specialized Electronics Factory: Factories focusing specifically on power products, chargers, and PCBA (Printed Circuit Board Assembly)."
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001:2015: Certification for a quality management system, indicating consistent production processes.",
+        "WPC (Wireless Power Consortium) Membership: Verifies the factory is part of the official Qi ecosystem and has experience with the certification process.",
+        "Evidence of Prior US Market Compliance: The factory must provide recent (within 2-3 years) UL/ETL test reports and active FCC IDs for similar products they have manufactured."
+      ],
+      "niceToHaveCertificates": [
+        "BSCI (Business Social Compliance Initiative): Audit report showing compliance with international labor standards.",
+        "SMETA (Sedex Members Ethical Trade Audit): Demonstrates ethical and responsible business practices in labor, health, safety, and the environment.",
+        "ISO 14001: Certification for an environmental management system."
+      ],
+      "sampleQuestionsToFactory": [
+        "Are you an active member of the Wireless Power Consortium (WPC)? Please provide your membership details for verification.",
+        "Can you provide a full, unredacted UL 62368-1 test report for a similar wireless charger you have produced for the US market within the last 2 years?",
+        "Please provide the FCC ID for one of your recent wireless charger models so we can verify its grant of authorization in the FCC database.",
+        "What is your standard production line testing for each unit, specifically for foreign object detection (FOD), over-temperature protection, and charging efficiency?",
+        "Do you conduct a 100% burn-in or aging test on finished products? If so, for how long and under what electrical load?"
+      ],
+      "commonRedFlags": [
+        "Claiming 'Qi-Compatible' but not being a WPC member or having any officially certified products in the WPC database.",
+        "Inability to provide valid, recent UL/ETL test reports or verifiable FCC IDs for similar products.",
+        "Unusually low pricing, which often indicates the use of substandard components, omission of critical safety circuits, or falsified certifications.",
+        "Vague or evasive answers to technical questions about compliance, testing procedures, or key components used.",
+        "No ISO 9001 certification, which may indicate a lack of standardized quality control processes."
+      ],
+      "recommendedAlibabaFilters": [
+        "Verified Supplier",
+        "Trade Assurance",
+        "Supplier with > 3 years of experience",
+        "Filter by certifications: ISO 9001, BSCI"
+      ]
+    },
+    {
+      "id": "electric_kettle",
+      "label": "Glass Electric Kettle",
+      "typicalSupplierTypes": [
+        "ODM (Original Design Manufacturer): Most common; they have existing designs that can be private labeled. They should already have experience with US compliance.",
+        "OEM (Original Equipment Manufacturer): Will build to your specific design, but requires more rigorous oversight from the importer to ensure compliance."
+      ],
+      "mustHaveCertificates": [
+        "ISO 9001:2015 - For quality management systems. This is a baseline for a reliable manufacturer.",
+        "Proof of existing NRTL Certification (e.g., UL Listing or ETL Mark) for similar electric kettle models. Ask for the UL File Number or ETL Control Number and verify it in the respective NRTL's public directory.",
+        "FDA Compliance Test Reports for all food-contact materials used in the product."
+      ],
+      "niceToHaveCertificates": [
+        "BSCI (Business Social Compliance Initiative) Audit Report",
+        "SMETA (Sedex Members Ethical Trade Audit) Report",
+        "ISO 14001 - For environmental management systems."
+      ],
+      "sampleQuestionsToFactory": [
+        "Can you provide the verifiable UL File Number or ETL Control Number for the exact model you are proposing?",
+        "What brand of thermostat controller do you use? Is it Strix or Otter?",
+        "Please provide the full FDA 21 CFR compliance test reports for the glass, stainless steel, silicone seal, and plastic lid.",
+        "Can you share your most recent BSCI or SMETA social compliance audit report?",
+        "What specific quality control checks do you perform on the production line, including Hi-Pot testing, grounding continuity, and function testing for every unit?"
+      ],
+      "commonRedFlags": [
+        "Supplier cannot provide a valid, verifiable UL or ETL certification number for a similar product.",
+        "Supplier claims 'CE' certification is sufficient for the US market (CE is for Europe and is not recognized for US electrical safety compliance).",
+        "Vagueness about the brand of the internal thermostat controller or using an unknown, cheaper brand.",
+        "Hesitation to provide material compliance reports (FDA, Prop 65) or providing outdated/irrelevant reports.",
+        "A price that is significantly lower than competitors, often indicating the use of substandard components and cutting corners on safety testing."
+      ],
+      "recommendedAlibabaFilters": [
+        "Verified Supplier",
+        "Trade Assurance",
+        "Years in Business: > 5 years",
+        "Search Keywords: 'ETL electric kettle', 'UL listed kettle', 'Strix controller kettle', 'FDA food grade kettle'"
+      ]
+    }
+  ]
+}

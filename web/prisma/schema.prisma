@@ -59,3 +59,22 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
+// Alpha Limit Events / Lead Intelligence
+model LimitEvent {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  userId    String?  // Nullable - authenticated user's email/ID
+  userType  String   // "anonymous" or "user"
+  reason    String   // e.g. "anonymous_daily_limit" or "user_daily_limit"
+  action    String   // "limit_hit" | "cta_primary_click" | "cta_secondary_click"
+  input     String?  @db.Text // Product idea / query the user entered
+  userAgent String?  @db.Text // From request headers
+  notes     String?  @db.Text // Manual notes for lead qualification
+
+  @@index([createdAt])
+  @@index([userType])
+  @@index([action])
+  @@index([userId])
+}
+
